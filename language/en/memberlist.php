@@ -48,7 +48,7 @@ $lang = array_merge($lang, array(
 
 	'BEFORE'				=> 'Before',
 
-	'CC_EMAIL'				=> 'Send a copy of this email to yourself.',
+	'CC_SENDER'				=> 'Send a copy of this email to yourself.',
 	'CONTACT_ADMIN'			=> 'Contact a Board Administrator',
 
 	'DEST_LANG'				=> 'Language',
@@ -101,6 +101,7 @@ $lang = array_merge($lang, array(
 	'LOGIN_EXPLAIN_SEARCHUSER'	=> 'The board requires you to be registered and logged in to search users.',
 	'LOGIN_EXPLAIN_VIEWPROFILE'	=> 'The board requires you to be registered and logged in to view profiles.',
 
+	'MANAGE_GROUP'			=> 'Manage Group',
 	'MORE_THAN'				=> 'More than',
 
 	'NO_CONTACT_FORM'		=> 'The board administrator contact form has been disabled.',

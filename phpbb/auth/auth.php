@@ -514,7 +514,7 @@ class auth
 	*/
 	function acl_clear_prefetch($user_id = false)
 	{
-		global $db, $cache;
+		global $db, $cache, $phpbb_dispatcher;
 
 		// Rebuild options cache
 		$cache->destroy('_role_cache');
@@ -552,6 +552,16 @@ class auth
 				user_perm_from = 0
 			$where_sql";
 		$db->sql_query($sql);
+
+		/**
+		* Event is triggered after user(s) permission settings cache has been cleared
+		*
+		* @event core.acl_clear_prefetch_after
+		* @var	mixed	user_id	User ID(s)
+		* @since 3.1.11-RC1
+		*/
+		$vars = array('user_id');
+		extract($phpbb_dispatcher->trigger_event('core.acl_clear_prefetch_after', compact($vars)));
 
 		return;
 	}
@@ -927,11 +937,13 @@ class auth
 	*/
 	function login($username, $password, $autologin = false, $viewonline = 1, $admin = 0)
 	{
-		global $config, $db, $user, $phpbb_root_path, $phpEx, $phpbb_container;
+		global $db, $user, $phpbb_root_path, $phpEx, $phpbb_container;
+		global $phpbb_dispatcher;
 
-		$method = trim(basename($config['auth_method']));
+		/* @var $provider_collection \phpbb\auth\provider_collection */
+		$provider_collection = $phpbb_container->get('auth.provider_collection');
 
-		$provider = $phpbb_container->get('auth.provider.' . $method);
+		$provider = $provider_collection->get_provider();
 		if ($provider)
 		{
 			$login = $provider->login($username, $password);
@@ -981,6 +993,24 @@ class auth
 
 				redirect($url);
 			}
+
+			/**
+			 * Event is triggered after checking for valid username and password, and before the actual session creation.
+			 *
+			 * @event core.auth_login_session_create_before
+			 * @var	array	login				Variable containing login array
+			 * @var	bool	admin				Boolean variable whether user is logging into the ACP
+			 * @var	string	username			Username of user to log in
+			 * @var	bool	autologin			Boolean variable signaling whether login is triggered via auto login
+			 * @since 3.1.7-RC1
+			 */
+			$vars = array(
+				'login',
+				'admin',
+				'username',
+				'autologin',
+			);
+			extract($phpbb_dispatcher->trigger_event('core.auth_login_session_create_before', compact($vars)));
 
 			// If login succeeded, we will log the user in... else we pass the login array through...
 			if ($login['status'] == LOGIN_SUCCESS)

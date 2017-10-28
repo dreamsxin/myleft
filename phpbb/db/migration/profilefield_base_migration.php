@@ -13,7 +13,7 @@
 
 namespace phpbb\db\migration;
 
-abstract class profilefield_base_migration extends \phpbb\db\migration\migration
+abstract class profilefield_base_migration extends container_aware_migration
 {
 	protected $profilefield_name;
 
@@ -191,6 +191,7 @@ abstract class profilefield_base_migration extends \phpbb\db\migration\migration
 		$insert_buffer = new \phpbb\db\sql_insert_buffer($this->db, $this->table_prefix . 'profile_fields_data');
 		$limit = 250;
 		$converted_users = 0;
+		$start = $start ?: 0;
 
 		$sql = 'SELECT user_id, ' . $this->user_column_name . '
 			FROM ' . $this->table_prefix . 'users
@@ -237,8 +238,8 @@ abstract class profilefield_base_migration extends \phpbb\db\migration\migration
 
 		if ($profile_row === null)
 		{
-			global $phpbb_container;
-			$manager = $phpbb_container->get('profilefields.manager');
+			/* @var $manager \phpbb\profilefields\manager */
+			$manager = $this->container->get('profilefields.manager');
 			$profile_row = $manager->build_insert_sql_array(array());
 		}
 

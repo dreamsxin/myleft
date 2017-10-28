@@ -26,17 +26,16 @@ if (!defined('IN_PHPBB'))
 class acp_board
 {
 	var $u_action;
-	var $new_config = array();
+	var $new_config;
 
 	function main($id, $mode)
 	{
-		global $db, $user, $auth, $template;
-		global $config, $phpbb_root_path, $phpbb_admin_path, $phpEx;
-		global $cache, $phpbb_container, $phpbb_dispatcher;
+		global $user, $template, $request;
+		global $config, $phpbb_root_path, $phpEx;
+		global $cache, $phpbb_container, $phpbb_dispatcher, $phpbb_log;
 
 		$user->add_lang('acp/board');
 
-		$action	= request_var('action', '');
 		$submit = (isset($_POST['submit']) || isset($_POST['allow_quick_reply_enable'])) ? true : false;
 
 		$form_key = 'acp_board';
@@ -94,6 +93,7 @@ class acp_board
 						'allow_bbcode'			=> array('lang' => 'ALLOW_BBCODE',			'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => false),
 						'allow_smilies'			=> array('lang' => 'ALLOW_SMILIES',			'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => false),
 						'allow_sig'				=> array('lang' => 'ALLOW_SIG',				'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => false),
+						'allow_board_notifications'		=> array('lang' => 'ALLOW_BOARD_NOTIFICATIONS',		'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => false),
 						'allow_nocensors'		=> array('lang' => 'ALLOW_NO_CENSORS',		'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
 						'allow_bookmarks'		=> array('lang' => 'ALLOW_BOOKMARKS',		'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
 						'allow_birthdays'		=> array('lang' => 'ALLOW_BIRTHDAYS',		'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
@@ -115,6 +115,7 @@ class acp_board
 			break;
 
 			case 'avatar':
+				/* @var $phpbb_avatar_manager \phpbb\avatar\manager */
 				$phpbb_avatar_manager = $phpbb_container->get('avatar.manager');
 				$avatar_drivers = $phpbb_avatar_manager->get_all_drivers();
 
@@ -195,6 +196,7 @@ class acp_board
 						'allow_post_flash'		=> array('lang' => 'ALLOW_POST_FLASH',		'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
 						'allow_smilies'			=> array('lang' => 'ALLOW_SMILIES',			'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => false),
 						'allow_post_links'		=> array('lang' => 'ALLOW_POST_LINKS',		'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
+						'allowed_schemes_links'	=> array('lang' => 'ALLOWED_SCHEMES_LINKS',	'validate' => 'string',	'type' => 'text:0:255', 'explain' => true),
 						'allow_nocensors'		=> array('lang' => 'ALLOW_NO_CENSORS',		'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
 						'allow_bookmarks'		=> array('lang' => 'ALLOW_BOOKMARKS',		'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
 						'enable_post_confirm'	=> array('lang' => 'VISUAL_CONFIRM_POST',	'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
@@ -318,10 +320,11 @@ class acp_board
 					'title'	=> 'ACP_COOKIE_SETTINGS',
 					'vars'	=> array(
 						'legend1'		=> 'ACP_COOKIE_SETTINGS',
-						'cookie_domain'	=> array('lang' => 'COOKIE_DOMAIN',	'validate' => 'string',	'type' => 'text::255', 'explain' => false),
-						'cookie_name'	=> array('lang' => 'COOKIE_NAME',	'validate' => 'string',	'type' => 'text::16', 'explain' => false),
-						'cookie_path'	=> array('lang'	=> 'COOKIE_PATH',	'validate' => 'string',	'type' => 'text::255', 'explain' => false),
-						'cookie_secure'	=> array('lang' => 'COOKIE_SECURE',	'validate' => 'bool',	'type' => 'radio:disabled_enabled', 'explain' => true),
+						'cookie_domain'	=> array('lang' => 'COOKIE_DOMAIN',	'validate' => 'string',	'type' => 'text::255', 'explain' => true),
+						'cookie_name'	=> array('lang' => 'COOKIE_NAME',	'validate' => 'string',	'type' => 'text::16', 'explain' => true),
+						'cookie_path'	=> array('lang'	=> 'COOKIE_PATH',	'validate' => 'string',	'type' => 'text::255', 'explain' => true),
+						'cookie_secure'	=> array('lang' => 'COOKIE_SECURE',	'validate' => 'bool',	'type' => 'radio:enabled_disabled', 'explain' => true),
+						'cookie_notice'	=> array('lang' => 'COOKIE_NOTICE',	'validate' => 'bool',	'type' => 'radio:enabled_disabled', 'explain' => true),
 					)
 				);
 			break;
@@ -350,6 +353,7 @@ class acp_board
 						'load_moderators'		=> array('lang' => 'YES_MODERATORS',		'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => false),
 						'load_jumpbox'			=> array('lang' => 'YES_JUMPBOX',			'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => false),
 						'load_user_activity'	=> array('lang' => 'LOAD_USER_ACTIVITY',	'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
+						'load_user_activity_limit'		=> array('lang' => 'LOAD_USER_ACTIVITY_LIMIT',		'validate' => 'int:0:99999999',	'type' => 'number:0:99999999', 'explain' => true),
 						'load_tplcompile'		=> array('lang' => 'RECOMPILE_STYLES',		'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
 						'allow_cdn'				=> array('lang' => 'ALLOW_CDN',				'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
 						'allow_live_searches'	=> array('lang' => 'ALLOW_LIVE_SEARCHES',	'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
@@ -414,6 +418,7 @@ class acp_board
 						'browser_check'			=> array('lang' => 'BROWSER_VALID',			'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
 						'forwarded_for_check'	=> array('lang' => 'FORWARDED_FOR_VALID',	'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
 						'referer_validation'	=> array('lang' => 'REFERRER_VALID',		'validate' => 'int:0:3','type' => 'custom', 'method' => 'select_ref_check', 'explain' => true),
+						'remote_upload_verify'	=> array('lang' => 'UPLOAD_CERT_VALID',	'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
 						'check_dnsbl'			=> array('lang' => 'CHECK_DNSBL',			'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
 						'email_check_mx'		=> array('lang' => 'EMAIL_CHECK_MX',		'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
 						'max_pass_chars'		=> array('lang' => 'PASSWORD_LENGTH', 'validate' => 'int:8:255', 'type' => false, 'method' => false, 'explain' => false,),
@@ -446,14 +451,18 @@ class acp_board
 						'board_email'			=> array('lang' => 'ADMIN_EMAIL',			'validate' => 'email',	'type' => 'email:25:100', 'explain' => true),
 						'board_email_sig'		=> array('lang' => 'EMAIL_SIG',				'validate' => 'string',	'type' => 'textarea:5:30', 'explain' => true),
 						'board_hide_emails'		=> array('lang' => 'BOARD_HIDE_EMAILS',		'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
+						'send_test_email'		=> array('lang' => 'SEND_TEST_EMAIL',		'validate' => 'bool',	'type' => 'custom', 'method' => 'send_test_email', 'explain' => true),
 
 						'legend2'				=> 'SMTP_SETTINGS',
 						'smtp_delivery'			=> array('lang' => 'USE_SMTP',				'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
-						'smtp_host'				=> array('lang' => 'SMTP_SERVER',			'validate' => 'string',	'type' => 'text:25:50', 'explain' => false),
+						'smtp_host'				=> array('lang' => 'SMTP_SERVER',			'validate' => 'string',	'type' => 'text:25:50', 'explain' => true),
 						'smtp_port'				=> array('lang' => 'SMTP_PORT',				'validate' => 'int:0:99999',	'type' => 'number:0:99999', 'explain' => true),
 						'smtp_auth_method'		=> array('lang' => 'SMTP_AUTH_METHOD',		'validate' => 'string',	'type' => 'select', 'method' => 'mail_auth_select', 'explain' => true),
 						'smtp_username'			=> array('lang' => 'SMTP_USERNAME',			'validate' => 'string',	'type' => 'text:25:255', 'explain' => true),
 						'smtp_password'			=> array('lang' => 'SMTP_PASSWORD',			'validate' => 'string',	'type' => 'password:25:255', 'explain' => true),
+						'smtp_verify_peer'		=> array('lang' => 'SMTP_VERIFY_PEER',		'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
+						'smtp_verify_peer_name'	=> array('lang' => 'SMTP_VERIFY_PEER_NAME',	'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
+						'smtp_allow_self_signed'=> array('lang' => 'SMTP_ALLOW_SELF_SIGNED','validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => true),
 
 						'legend3'					=> 'ACP_SUBMIT_CHANGES',
 					)
@@ -482,8 +491,8 @@ class acp_board
 			$user->add_lang($display_vars['lang']);
 		}
 
-		$this->new_config = $config;
-		$cfg_array = (isset($_REQUEST['config'])) ? utf8_normalize_nfc(request_var('config', array('' => ''), true)) : $this->new_config;
+		$this->new_config = clone $config;
+		$cfg_array = (isset($_REQUEST['config'])) ? $request->variable('config', array('' => ''), true) : $this->new_config;
 		$error = array();
 
 		// We validate the complete config if wished
@@ -500,7 +509,7 @@ class acp_board
 		}
 
 		// We go through the display_vars to make sure no one is trying to set variables he/she is not allowed to...
-		foreach ($display_vars['vars'] as $config_name => $null)
+		foreach ($display_vars['vars'] as $config_name => $data)
 		{
 			if (!isset($cfg_array[$config_name]) || strpos($config_name, 'legend') !== false)
 			{
@@ -514,7 +523,8 @@ class acp_board
 
 			if ($config_name == 'guest_style')
 			{
-				if (isset($cfg_array[$config_name])) {
+				if (isset($cfg_array[$config_name]))
+				{
 					$this->guest_style_set($cfg_array[$config_name]);
 				}
 				continue;
@@ -531,13 +541,26 @@ class acp_board
 
 			if ($submit)
 			{
-				set_config($config_name, $config_value);
+				if (strpos($data['type'], 'password') === 0 && $config_value === '********')
+				{
+					// Do not update password fields if the content is ********,
+					// because that is the password replacement we use to not
+					// send the password to the output
+					continue;
+				}
+				$config->set($config_name, $config_value);
 
 				if ($config_name == 'allow_quick_reply' && isset($_POST['allow_quick_reply_enable']))
 				{
 					enable_bitfield_column_flag(FORUMS_TABLE, 'forum_flags', log(FORUM_FLAG_QUICK_REPLY, 2));
 				}
 			}
+		}
+
+		// Invalidate the text_formatter cache when posting options are changed
+		if ($mode == 'post' && $submit)
+		{
+			$phpbb_container->get('text_formatter.cache')->invalidate();
 		}
 
 		// Store news and exclude ids
@@ -553,12 +576,14 @@ class acp_board
 		if ($mode == 'auth')
 		{
 			// Retrieve a list of auth plugins and check their config values
+			/* @var $auth_providers \phpbb\auth\provider_collection */
 			$auth_providers = $phpbb_container->get('auth.provider_collection');
 
 			$updated_auth_settings = false;
 			$old_auth_config = array();
 			foreach ($auth_providers as $provider)
 			{
+				/** @var \phpbb\auth\provider\provider_interface $provider */
 				if ($fields = $provider->acp())
 				{
 					// Check if we need to create config fields for this plugin and save config when submit was pressed
@@ -566,11 +591,19 @@ class acp_board
 					{
 						if (!isset($config[$field]))
 						{
-							set_config($field, '');
+							$config->set($field, '');
 						}
 
 						if (!isset($cfg_array[$field]) || strpos($field, 'legend') !== false)
 						{
+							continue;
+						}
+
+						if (substr($field, -9) === '_password' && $cfg_array[$field] === '********')
+						{
+							// Do not update password fields if the content is ********,
+							// because that is the password replacement we use to not
+							// send the password to the output
 							continue;
 						}
 
@@ -581,7 +614,7 @@ class acp_board
 						if ($submit)
 						{
 							$updated_auth_settings = true;
-							set_config($field, $config_value);
+							$config->set($field, $config_value);
 						}
 					}
 				}
@@ -598,11 +631,11 @@ class acp_board
 					{
 						foreach ($old_auth_config as $config_name => $config_value)
 						{
-							set_config($config_name, $config_value);
+							$config->set($config_name, $config_value);
 						}
 						trigger_error($error . adm_back_link($this->u_action), E_USER_WARNING);
 					}
-					set_config('auth_method', basename($cfg_array['auth_method']));
+					$config->set('auth_method', basename($cfg_array['auth_method']));
 				}
 				else
 				{
@@ -611,11 +644,43 @@ class acp_board
 			}
 		}
 
+		if ($mode == 'email' && $request->is_set_post('send_test_email'))
+		{
+			if ($config['email_enable'])
+			{
+				include_once($phpbb_root_path . 'includes/functions_messenger.' . $phpEx);
+
+				$messenger = new messenger(false);
+				$messenger->template('test');
+				$messenger->set_addresses($user->data);
+				$messenger->anti_abuse_headers($config, $user);
+				$messenger->assign_vars(array(
+					'USERNAME'	=> htmlspecialchars_decode($user->data['username']),
+				));
+				$messenger->send(NOTIFY_EMAIL);
+
+				trigger_error($user->lang('TEST_EMAIL_SENT') . adm_back_link($this->u_action));
+			}
+			else
+			{
+				$user->add_lang('memberlist');
+				trigger_error($user->lang('EMAIL_DISABLED') . adm_back_link($this->u_action), E_USER_WARNING);
+			}
+		}
+
 		if ($submit)
 		{
-			add_log('admin', 'LOG_CONFIG_' . strtoupper($mode));
+			$phpbb_log->add('admin', $user->data['user_id'], $user->ip, 'LOG_CONFIG_' . strtoupper($mode));
 
-			trigger_error($user->lang['CONFIG_UPDATED'] . adm_back_link($this->u_action));
+			$message = $user->lang('CONFIG_UPDATED');
+			$message_type = E_USER_NOTICE;
+			if (!$config['email_enable'] && in_array($mode, array('email', 'registration')) &&
+				in_array($config['require_activation'], array(USER_ACTIVATION_SELF, USER_ACTIVATION_ADMIN)))
+			{
+				$message .= '<br /><br />' . $user->lang('ACC_ACTIVATION_WARNING');
+				$message_type = E_USER_WARNING;
+			}
+			trigger_error($message . adm_back_link($this->u_action), $message_type);
 		}
 
 		$this->tpl_name = 'acp_board';
@@ -710,10 +775,11 @@ class acp_board
 	*/
 	function select_auth_method($selected_method, $key = '')
 	{
-		global $phpbb_root_path, $phpEx, $phpbb_container;
+		global $phpbb_container;
 
-		$auth_plugins = array();
+		/* @var $auth_providers \phpbb\auth\provider_collection */
 		$auth_providers = $phpbb_container->get('auth.provider_collection');
+		$auth_plugins = array();
 
 		foreach ($auth_providers as $key => $value)
 		{
@@ -792,20 +858,19 @@ class acp_board
 		global $user, $config;
 
 		$act_ary = array(
-			'ACC_DISABLE' => USER_ACTIVATION_DISABLE,
-			'ACC_NONE' => USER_ACTIVATION_NONE,
+			'ACC_DISABLE'	=> array(true, USER_ACTIVATION_DISABLE),
+			'ACC_NONE'		=> array(true, USER_ACTIVATION_NONE),
+			'ACC_USER'		=> array($config['email_enable'], USER_ACTIVATION_SELF),
+			'ACC_ADMIN'		=> array($config['email_enable'], USER_ACTIVATION_ADMIN),
 		);
-		if ($config['email_enable'])
-		{
-			$act_ary['ACC_USER'] = USER_ACTIVATION_SELF;
-			$act_ary['ACC_ADMIN'] = USER_ACTIVATION_ADMIN;
-		}
-		$act_options = '';
 
-		foreach ($act_ary as $key => $value)
+		$act_options = '';
+		foreach ($act_ary as $key => $data)
 		{
+			list($available, $value) = $data;
 			$selected = ($selected_value == $value) ? ' selected="selected"' : '';
-			$act_options .= '<option value="' . $value . '"' . $selected . '>' . $user->lang[$key] . '</option>';
+			$class = (!$available) ? ' class="disabled-option"' : '';
+			$act_options .= '<option value="' . $value . '"' . $selected . $class . '>' . $user->lang($key) . '</option>';
 		}
 
 		return $act_options;
@@ -818,7 +883,7 @@ class acp_board
 	{
 		global $user;
 
-		return '<input id="' . $key . '" type="number" size="3" maxlength="3" min="1" max="999" name="config[min_name_chars]" value="' . $value . '" /> ' . $user->lang['MIN_CHARS'] . '&nbsp;&nbsp;<input type="number" size="3" maxlength="3" min="8" max="180" name="config[max_name_chars]" value="' . $this->new_config['max_name_chars'] . '" /> ' . $user->lang['MAX_CHARS'];
+		return '<input id="' . $key . '" type="number" min="1" max="999" name="config[min_name_chars]" value="' . $value . '" /> ' . $user->lang['MIN_CHARS'] . '&nbsp;&nbsp;<input type="number" min="8" max="180" name="config[max_name_chars]" value="' . $this->new_config['max_name_chars'] . '" /> ' . $user->lang['MAX_CHARS'];
 	}
 
 	/**
@@ -846,7 +911,7 @@ class acp_board
 	{
 		global $user;
 
-		return '<input id="' . $key . '" type="number" size="3" maxlength="3" min="1" max="999" name="config[min_pass_chars]" value="' . $value . '" /> ' . $user->lang['MIN_CHARS'] . '&nbsp;&nbsp;<input type="number" size="3" maxlength="3" min="8" max="255" name="config[max_pass_chars]" value="' . $this->new_config['max_pass_chars'] . '" /> ' . $user->lang['MAX_CHARS'];
+		return '<input id="' . $key . '" type="number" min="1" max="999" name="config[min_pass_chars]" value="' . $value . '" /> ' . $user->lang['MIN_CHARS'] . '&nbsp;&nbsp;<input type="number" min="8" max="255" name="config[max_pass_chars]" value="' . $this->new_config['max_pass_chars'] . '" /> ' . $user->lang['MAX_CHARS'];
 	}
 
 	/**
@@ -890,8 +955,6 @@ class acp_board
 	*/
 	function board_disable($value, $key)
 	{
-		global $user;
-
 		$radio_ary = array(1 => 'YES', 0 => 'NO');
 
 		return h_radio('config[board_disable]', $radio_ary, $value) . '<br /><input id="' . $key . '" type="text" name="config[board_disable_msg]" maxlength="255" size="40" value="' . $this->new_config['board_disable_msg'] . '" />';
@@ -993,7 +1056,7 @@ class acp_board
 		$user->timezone = $old_tz;
 
 		return "<select name=\"dateoptions\" id=\"dateoptions\" onchange=\"if (this.value == 'custom') { document.getElementById('" . addslashes($key) . "').value = '" . addslashes($value) . "'; } else { document.getElementById('" . addslashes($key) . "').value = this.value; }\">$dateformat_options</select>
-		<input type=\"text\" name=\"config[$key]\" id=\"$key\" value=\"$value\" maxlength=\"30\" />";
+		<input type=\"text\" name=\"config[$key]\" id=\"$key\" value=\"$value\" maxlength=\"64\" />";
 	}
 
 	/**
@@ -1001,8 +1064,6 @@ class acp_board
 	*/
 	function select_news_forums($value, $key)
 	{
-		global $user, $config;
-
 		$forum_list = make_forum_select(false, false, true, true, true, false, true);
 
 		// Build forum options
@@ -1020,8 +1081,6 @@ class acp_board
 
 	function select_exclude_forums($value, $key)
 	{
-		global $user, $config;
-
 		$forum_list = make_forum_select(false, false, true, true, true, false, true);
 
 		// Build forum options
@@ -1039,10 +1098,10 @@ class acp_board
 
 	function store_feed_forums($option, $key)
 	{
-		global $db, $cache;
+		global $db, $cache, $request;
 
 		// Get key
-		$values = request_var($key, array(0 => 0));
+		$values = $request->variable($key, array(0 => 0));
 
 		// Empty option bit for all forums
 		$sql = 'UPDATE ' . FORUMS_TABLE . '
@@ -1077,7 +1136,7 @@ class acp_board
 	*/
 	function enable_mod_rewrite($value, $key)
 	{
-		global $user, $config;
+		global $user;
 
 		// Determine whether mod_rewrite is enabled on the server
 		// NOTE: This only works on Apache servers on which PHP is NOT
@@ -1110,5 +1169,12 @@ class acp_board
 
 		return h_radio($field_name, array(1 => 'YES', 0 => 'NO'), $value) .
 			($message !== false ? '<br /><span>' . $user->lang($message) . '</span>' : '');
+	}
+
+	function send_test_email($value, $key)
+	{
+		global $user;
+
+		return '<input class="button2" type="submit" id="' . $key . '" name="' . $key . '" value="' . $user->lang['SEND_TEST_EMAIL'] . '" />';
 	}
 }

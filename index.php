@@ -42,9 +42,10 @@ if (($mark_notification = $request->variable('mark_notification', 0)))
 
 	if (check_link_hash($request->variable('hash', ''), 'mark_notification_read'))
 	{
+		/* @var $phpbb_notifications \phpbb\notification\manager */
 		$phpbb_notifications = $phpbb_container->get('notification_manager');
 
-		$notification = $phpbb_notifications->load_notifications(array(
+		$notification = $phpbb_notifications->load_notifications('notification.method.board', array(
 			'notification_id'	=> $mark_notification,
 		));
 
@@ -99,11 +100,14 @@ else
 }
 $result = $db->sql_query($sql);
 
+/** @var \phpbb\group\helper $group_helper */
+$group_helper = $phpbb_container->get('group_helper');
+
 $legend = array();
 while ($row = $db->sql_fetchrow($result))
 {
 	$colour_text = ($row['group_colour']) ? ' style="color:#' . $row['group_colour'] . '"' : '';
-	$group_name = ($row['group_type'] == GROUP_SPECIAL) ? $user->lang['G_' . $row['group_name']] : $row['group_name'];
+	$group_name = $group_helper->get_name($row['group_name']);
 
 	if ($row['group_name'] == 'BOTS' || ($user->data['user_id'] != ANONYMOUS && !$auth->acl_get('u_viewprofile')))
 	{
@@ -119,7 +123,7 @@ $db->sql_freeresult($result);
 $legend = implode($user->lang['COMMA_SEPARATOR'], $legend);
 
 // Generate birthday list if required ...
-$birthday_list = array();
+$birthdays = $birthday_list = array();
 if ($config['load_birthdays'] && $config['allow_birthdays'] && $auth->acl_gets('u_viewprofile', 'a_user', 'a_useradd', 'a_userdel'))
 {
 	$time = $user->create_datetime();
@@ -132,33 +136,66 @@ if ($config['load_birthdays'] && $config['allow_birthdays'] && $auth->acl_gets('
 		$leap_year_birthdays = " OR u.user_birthday LIKE '" . $db->sql_escape(sprintf('%2d-%2d-', 29, 2)) . "%'";
 	}
 
-	$sql = 'SELECT u.user_id, u.username, u.user_colour, u.user_birthday
-		FROM ' . USERS_TABLE . ' u
-		LEFT JOIN ' . BANLIST_TABLE . " b ON (u.user_id = b.ban_userid)
-		WHERE (b.ban_id IS NULL
-			OR b.ban_exclude = 1)
+	$sql_ary = array(
+		'SELECT' => 'u.user_id, u.username, u.user_colour, u.user_birthday',
+		'FROM' => array(
+			USERS_TABLE => 'u',
+		),
+		'LEFT_JOIN' => array(
+			array(
+				'FROM' => array(BANLIST_TABLE => 'b'),
+				'ON' => 'u.user_id = b.ban_userid',
+			),
+		),
+		'WHERE' => "(b.ban_id IS NULL OR b.ban_exclude = 1)
 			AND (u.user_birthday LIKE '" . $db->sql_escape(sprintf('%2d-%2d-', $now['mday'], $now['mon'])) . "%' $leap_year_birthdays)
-			AND u.user_type IN (" . USER_NORMAL . ', ' . USER_FOUNDER . ')';
-	$result = $db->sql_query($sql);
+			AND u.user_type IN (" . USER_NORMAL . ', ' . USER_FOUNDER . ')',
+	);
 
-	while ($row = $db->sql_fetchrow($result))
+	/**
+	* Event to modify the SQL query to get birthdays data
+	*
+	* @event core.index_modify_birthdays_sql
+	* @var	array	now			The assoc array with the 'now' local timestamp data
+	* @var	array	sql_ary		The SQL array to get the birthdays data
+	* @var	object	time		The user related Datetime object
+	* @since 3.1.7-RC1
+	*/
+	$vars = array('now', 'sql_ary', 'time');
+	extract($phpbb_dispatcher->trigger_event('core.index_modify_birthdays_sql', compact($vars)));
+
+	$sql = $db->sql_build_query('SELECT', $sql_ary);
+	$result = $db->sql_query($sql);
+	$rows = $db->sql_fetchrowset($result);
+	$db->sql_freeresult($result);
+
+	foreach ($rows as $row)
 	{
 		$birthday_username	= get_username_string('full', $row['user_id'], $row['username'], $row['user_colour']);
 		$birthday_year		= (int) substr($row['user_birthday'], -4);
 		$birthday_age		= ($birthday_year) ? max(0, $now['year'] - $birthday_year) : '';
 
-		$template->assign_block_vars('birthdays', array(
+		$birthdays[] = array(
 			'USERNAME'	=> $birthday_username,
 			'AGE'		=> $birthday_age,
-		));
+		);
 
 		// For 3.0 compatibility
-		if ($age = (int) substr($row['user_birthday'], -4))
-		{
-			$birthday_list[] = $birthday_username . (($birthday_year) ? ' (' . $birthday_age . ')' : '');
-		}
+		$birthday_list[] = $birthday_username . (($birthday_age) ? " ({$birthday_age})" : '');
 	}
-	$db->sql_freeresult($result);
+
+	/**
+	* Event to modify the birthdays list
+	*
+	* @event core.index_modify_birthdays_list
+	* @var	array	birthdays		Array with the users birthdays data
+	* @var	array	rows			Array with the birthdays SQL query result
+	* @since 3.1.7-RC1
+	*/
+	$vars = array('birthdays', 'rows');
+	extract($phpbb_dispatcher->trigger_event('core.index_modify_birthdays_list', compact($vars)));
+
+	$template->assign_block_vars_array('birthdays', $birthdays);
 }
 
 // Assign index specific vars
@@ -185,7 +222,7 @@ $template->assign_vars(array(
 	'U_MCP'				=> ($auth->acl_get('m_') || $auth->acl_getf_global('m_')) ? append_sid("{$phpbb_root_path}mcp.$phpEx", 'i=main&amp;mode=front', true, $user->session_id) : '')
 );
 
-$page_title = $user->lang['INDEX'];
+$page_title = ($config['board_index_text'] !== '') ? $config['board_index_text'] : $user->lang['INDEX'];
 
 /**
 * You can use this event to modify the page title and load data for the index

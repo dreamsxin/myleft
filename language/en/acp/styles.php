@@ -74,12 +74,16 @@ $lang = array_merge($lang, array(
 	'STYLE_INSTALLED_RETURN_INSTALLED_STYLES'	=> 'Return to installed styles list',
 	'STYLE_INSTALLED_RETURN_UNINSTALLED_STYLES'	=> 'Install more styles',
 	'STYLE_NAME'				=> 'Style name',
+	'STYLE_NAME_RESERVED'		=> 'Style "%s" can not be installed, because the name is reserved.',
 	'STYLE_NOT_INSTALLED'		=> 'Style "%s" was not installed.',
 	'STYLE_PATH'				=> 'Style path',
 	'STYLE_UNINSTALL'			=> 'Uninstall',
 	'STYLE_UNINSTALL_DEPENDENT'	=> 'Style "%s" cannot be uninstalled because it has one or more child styles.',
 	'STYLE_UNINSTALLED'			=> 'Style "%s" uninstalled successfully.',
 	'STYLE_USED_BY'				=> 'Used by (including robots)',
+	'STYLE_VERSION'				=> 'Style version',
 
 	'UNINSTALL_DEFAULT'		=> 'You cannot uninstall the default style.',
+
+	'BROWSE_STYLES_DATABASE'	=> 'Browse styles database',
 ));

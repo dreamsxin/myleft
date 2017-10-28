@@ -14,35 +14,42 @@
 namespace phpbb\event;
 
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 use Symfony\Component\HttpKernel\KernelEvents;
 use Symfony\Component\HttpKernel\Event\GetResponseForExceptionEvent;
-use Symfony\Component\HttpKernel\Exception\HttpException;
 use Symfony\Component\HttpFoundation\Response;
 
 class kernel_exception_subscriber implements EventSubscriberInterface
 {
 	/**
 	* Template object
+	*
 	* @var \phpbb\template\template
 	*/
 	protected $template;
 
 	/**
-	* User object
-	* @var \phpbb\user
+	* Language object
+	*
+	* @var \phpbb\language\language
 	*/
-	protected $user;
+	protected $language;
+
+	/** @var \phpbb\request\type_cast_helper */
+	protected $type_caster;
 
 	/**
 	* Construct method
 	*
-	* @param \phpbb\template\template $template Template object
-	* @param \phpbb\user $user User object
+	* @param \phpbb\template\template	$template	Template object
+	* @param \phpbb\language\language	$language	Language object
 	*/
-	public function __construct(\phpbb\template\template $template, \phpbb\user $user)
+	public function __construct(\phpbb\template\template $template, \phpbb\language\language $language)
 	{
 		$this->template = $template;
-		$this->user = $user;
+		$this->language = $language;
+		$this->type_caster = new \phpbb\request\type_cast_helper();
 	}
 
 	/**
@@ -53,27 +60,63 @@ class kernel_exception_subscriber implements EventSubscriberInterface
 	*/
 	public function on_kernel_exception(GetResponseForExceptionEvent $event)
 	{
-		page_header($this->user->lang('INFORMATION'));
-
 		$exception = $event->getException();
 
-		$this->template->assign_vars(array(
-			'MESSAGE_TITLE'		=> $this->user->lang('INFORMATION'),
-			'MESSAGE_TEXT'		=> $exception->getMessage(),
-		));
+		$message = $exception->getMessage();
+		$this->type_caster->set_var($message, $message, 'string', true, false);
 
-		$this->template->set_filenames(array(
-			'body'	=> 'message_body.html',
-		));
+		if ($exception instanceof \phpbb\exception\exception_interface)
+		{
+			$message = $this->language->lang_array($message, $exception->get_parameters());
+		}
 
-		page_footer(true, false, false);
+		// Show <strong> text in bold
+		$message = preg_replace('#&lt;(/?strong)&gt;#i', '<$1>', $message);
 
-		$status_code = $exception instanceof HttpException ? $exception->getStatusCode() : 500;
-		$response = new Response($this->template->assign_display('body'), $status_code);
+		if (!$event->getRequest()->isXmlHttpRequest())
+		{
+			page_header($this->language->lang('INFORMATION'));
+
+			$this->template->assign_vars(array(
+				'MESSAGE_TITLE' => $this->language->lang('INFORMATION'),
+				'MESSAGE_TEXT'  => $message,
+			));
+
+			$this->template->set_filenames(array(
+				'body' => 'message_body.html',
+			));
+
+			page_footer(true, false, false);
+
+			$response = new Response($this->template->assign_display('body'), 500);
+		}
+		else
+		{
+			$data = array();
+
+			if (!empty($message))
+			{
+				$data['message'] = $message;
+			}
+
+			if (defined('DEBUG'))
+			{
+				$data['trace'] = $exception->getTrace();
+			}
+
+			$response = new JsonResponse($data, 500);
+		}
+
+		if ($exception instanceof HttpExceptionInterface)
+		{
+			$response->setStatusCode($exception->getStatusCode());
+			$response->headers->add($exception->getHeaders());
+		}
+
 		$event->setResponse($response);
 	}
 
-	public static function getSubscribedEvents()
+	static public function getSubscribedEvents()
 	{
 		return array(
 			KernelEvents::EXCEPTION		=> 'on_kernel_exception',

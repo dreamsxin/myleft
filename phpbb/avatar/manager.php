@@ -246,7 +246,7 @@ class manager
 	*/
 	public function is_enabled($driver)
 	{
-		$config_name = $this->get_driver_config_name($driver);
+		$config_name = $driver->get_config_name();
 
 		return $this->config["allow_avatar_{$config_name}"];
 	}
@@ -260,23 +260,11 @@ class manager
 	*/
 	public function get_avatar_settings($driver)
 	{
-		$config_name = $this->get_driver_config_name($driver);
+		$config_name = $driver->get_config_name();
 
 		return array(
 			'allow_avatar_' . $config_name	=> array('lang' => 'ALLOW_' . strtoupper(str_replace('\\', '_', $config_name)),		'validate' => 'bool',	'type' => 'radio:yes_no', 'explain' => false),
 		);
-	}
-
-	/**
-	* Get the config name of an avatar driver
-	*
-	* @param object $driver Avatar driver object
-	*
-	* @return string Avatar driver config name
-	*/
-	public function get_driver_config_name($driver)
-	{
-		return preg_replace('#^phpbb\\\\avatar\\\\driver\\\\#', '', get_class($driver));
 	}
 
 	/**
@@ -326,17 +314,41 @@ class manager
 			$driver->delete($avatar_data);
 		}
 
-		$result = self::$default_row;
-
-		foreach ($result as $key => $value)
-		{
-			$result[$prefix . $key] = $value;
-			unset($result[$key]);
-		}
+		$result = $this->prefix_avatar_columns($prefix, self::$default_row);
 
 		$sql = 'UPDATE ' . $table . '
-				SET ' . $db->sql_build_array('UPDATE', $result) . '
-				WHERE ' . $prefix . 'id = ' . (int) $avatar_data['id'];
+			SET ' . $db->sql_build_array('UPDATE', $result) . '
+			WHERE ' . $prefix . 'id = ' . (int) $avatar_data['id'];
 		$db->sql_query($sql);
+
+		// Make sure we also delete this avatar from the users
+		if ($prefix === 'group_')
+		{
+			$result = $this->prefix_avatar_columns('user_', self::$default_row);
+
+			$sql = 'UPDATE ' . USERS_TABLE . '
+				SET ' . $db->sql_build_array('UPDATE', $result) . "
+				WHERE user_avatar = '" . $db->sql_escape($avatar_data['avatar']) . "'";
+			$db->sql_query($sql);
+		}
+	}
+
+	/**
+	 * Prefix avatar columns
+	 *
+	 * @param string $prefix Column prefix
+	 * @param array $data Column data
+	 *
+	 * @return array Column data with prefixed column names
+	 */
+	public function prefix_avatar_columns($prefix, $data)
+	{
+		foreach ($data as $key => $value)
+		{
+			$data[$prefix . $key] = $value;
+			unset($data[$key]);
+		}
+
+		return $data;
 	}
 }

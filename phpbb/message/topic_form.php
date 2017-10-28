@@ -71,6 +71,14 @@ class topic_form extends form
 
 		if (!$this->auth->acl_get('f_read', $this->topic_row['forum_id']))
 		{
+			if ($this->user->data['user_id'] != ANONYMOUS)
+			{
+				send_status_line(403, 'Forbidden');
+			}
+			else
+			{
+				send_status_line(401, 'Unauthorized');
+			}
 			return 'SORRY_AUTH_READ';
 		}
 
@@ -117,7 +125,7 @@ class topic_form extends form
 			'TOPIC_NAME'	=> htmlspecialchars_decode($this->topic_row['topic_title']),
 			'U_TOPIC'		=> generate_board_url() . '/viewtopic.' . $this->phpEx . '?f=' . $this->topic_row['forum_id'] . '&t=' . $this->topic_id,
 		));
-
+		$this->message->set_body($this->body);
 		$this->message->add_recipient(
 			$this->recipient_name,
 			$this->recipient_address,
