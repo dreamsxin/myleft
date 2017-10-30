@@ -2217,4 +2217,8 @@ https://github.com/mesosphere/marathon
 
 https://github.com/acassen/keepalived
 
+https://github.com/corosync/corosync
+
+https://github.com/ClusterLabs/pacemaker
+
 https://github.com/iqiyi/dpvs
