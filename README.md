@@ -2215,4 +2215,6 @@ https://github.com/mesosphere/marathon
 
 ## 负载均衡 && load balancer
 
+https://github.com/acassen/keepalived
+
 https://github.com/iqiyi/dpvs
