@@ -152,6 +152,20 @@ https://github.com/firehol/netdata
 
 https://github.com/cossacklabs/themis
 
+# 安全扫描
+
+https://github.com/We5ter/Scanners-Box
+
+https://github.com/future-architect/vuls
+
+https://github.com/presidentbeef/brakeman
+
+https://github.com/psecio/iniscan
+
+https://github.com/psecio/parse
+
+https://github.com/scr34m/php-malware-scanner
+
 # NoSQL
 
 https://github.com/symisc/unqlite
@@ -484,6 +498,8 @@ https://github.com/AOP-PHP/AOP
 https://github.com/dreamsxin/php_riak
 
 ## CPP
+
+https://github.com/scanner-research/scanner
 
 https://github.com/cachelot/cachelot
 
