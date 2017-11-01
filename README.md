@@ -4,6 +4,8 @@ https://github.com/corosync/corosync
 
 https://github.com/brg-liuwei/ngx_kafka_module
 
+https://github.com/riolet/WAFer
+
 https://github.com/civetweb/civetweb
 
 https://github.com/cboxdoerfer/fsearch
@@ -708,6 +710,8 @@ https://github.com/dreamsxin/crtmp
 https://github.com/keyanmca/lmss
 
 # Nginx
+
+https://github.com/iresty/Mio
 
 https://github.com/chronolaw/ngx_cpp_dev
 
