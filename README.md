@@ -2091,6 +2091,8 @@ https://github.com/geany/geany
 
 # Deep Learning && 机器学习 && 深度学习 && 图片识别
 
+https://github.com/PaddlePaddle/Paddle
+
 https://github.com/FALCONN-LIB/FALCONN
 
 https://github.com/facebookresearch/faiss/
