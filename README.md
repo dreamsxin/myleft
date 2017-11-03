@@ -156,6 +156,19 @@ https://github.com/cossacklabs/themis
 
 https://github.com/hsleisink/hiawatha
 
+# Blender
+
+https://github.com/UPBGE/blender
+
+https://github.com/lubosz/HoVR
+
+https://cloud.blender.org/p/dailydweebs/
+
+https://cloud.blender.org/p/monkaa/
+
+https://cloud.blender.org/p/spring
+
+
 # 安全扫描
 
 https://github.com/We5ter/Scanners-Box
@@ -1599,6 +1612,8 @@ https://github.com/polgiron/chartme
 https://github.com/dreamsxin/g.raphael
 
 HTML5 Game
+
+https://github.com/freeciv/freeciv-web
 
 https://github.com/jdan/isomer
 
