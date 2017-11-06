@@ -1,5 +1,9 @@
 # C
 
+https://github.com/armon/bloomd
+
+https://github.com/Snawoot/bloom
+
 https://github.com/corosync/corosync
 
 https://github.com/brg-liuwei/ngx_kafka_module
