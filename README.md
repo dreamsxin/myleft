@@ -1,5 +1,9 @@
 # C
 
+https://github.com/endurox-dev/endurox
+
+https://github.com/lathiat/avahi
+
 https://github.com/armon/bloomd
 
 https://github.com/Snawoot/bloom
@@ -522,7 +526,9 @@ https://github.com/AOP-PHP/AOP
 
 https://github.com/dreamsxin/php_riak
 
-## CPP
+## CPP && C++
+
+https://github.com/infinisql/infinisql
 
 https://github.com/scanner-research/scanner
 
@@ -692,15 +698,27 @@ https://github.com/boostorg/coroutine2
 
 https://github.com/boostorg/mpi
 
+https://github.com/haptork/easyLambda
+
 ## C++ Distributed
 
 https://github.com/thrill/thrill
 
+##  Clojure
+
+https://github.com/onyx-platform/onyx
+
 # GO
 
-https://github.com/gin-gonic/gin
+https://github.com/coreos/etcd
 
 https://github.com/hashicorp/consul
+
+https://github.com/oklog/oklog
+
+https://github.com/ha/doozerd
+
+https://github.com/gin-gonic/gin
 
 https://github.com/kataras/iris
 
