@@ -54,8 +54,6 @@ https://github.com/libMesh/libmesh
 
 https://github.com/libtom/libtomcrypt
 
-https://github.com/tatsuhiro-t/wslay
-
 https://github.com/ellson/graphviz
 
 https://github.com/zserge/pt
@@ -79,10 +77,6 @@ https://github.com/rsky/libvmod-hmac
 https://github.com/mojaves/craneweb
 
 https://github.com/myun2/nitro
-
-https://github.com/boazsegev/facil.io
-
-https://github.com/payden/libwebsock
 
 https://github.com/machinezone/tcpkali
 
@@ -165,6 +159,24 @@ https://github.com/firehol/netdata
 https://github.com/cossacklabs/themis
 
 https://github.com/hsleisink/hiawatha
+
+# C Websocket
+
+https://github.com/boazsegev/facil.io
+
+https://github.com/payden/libwebsock
+
+https://github.com/tatsuhiro-t/wslay
+
+https://github.com/mortzdk/Websocket
+
+https://github.com/warmcat/libwebsockets
+
+# Websocket
+
+https://github.com/gorilla/websocket
+
+https://github.com/tsl0922/ttyd
 
 # Blender
 
@@ -583,8 +595,6 @@ https://github.com/eduardobeloni/jsonrpc-cpp
 https://github.com/makerbot/jsonrpc
 
 https://github.com/interactive-matter/aJson
-
-https://github.com/warmcat/libwebsockets
 
 https://github.com/ideawu/icomet
 
