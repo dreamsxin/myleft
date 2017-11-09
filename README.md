@@ -718,6 +718,8 @@ https://github.com/onyx-platform/onyx
 
 # GO
 
+https://github.com/sosedoff/pgweb
+
 https://github.com/coreos/etcd
 
 https://github.com/hashicorp/consul
