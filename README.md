@@ -1004,6 +1004,10 @@ https://github.com/wmandai/FreelancerOffice
 
 # Game
 
+https://sourceforge.net/projects/eftihia
+
+https://sourceforge.net/p/commrpg
+
 https://github.com/solarus-games/solarus
 
 https://github.com/solarus-games/children-of-solarus
@@ -1191,6 +1195,16 @@ https://github.com/pmer/TsunagariC
 https://github.com/borf/Browedit
 
 ## Game Engine
+
+https://sourceforge.net/projects/quakespasm/
+
+http://dengine.net/
+
+http://irrlicht.sourceforge.net/
+
+http://www.klayge.org/
+
+https://github.com/castle-engine/castle-engine
 
 https://github.com/Daivuk/onut
 
