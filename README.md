@@ -1,5 +1,11 @@
 # C
 
+https://github.com/varnishcache/varnish-cache
+
+https://github.com/ccache/ccache
+
+https://github.com/openresty/srcache-nginx-module
+
 https://github.com/allinurl/goaccess
 
 https://github.com/endurox-dev/endurox
@@ -415,6 +421,8 @@ https://github.com/sailorproject/sailor
 https://github.com/keplerproject/orbit
 
 ## PHP C
+
+https://github.com/happyfish100/libshmcache
 
 https://github.com/bukka/php-jsond
 
