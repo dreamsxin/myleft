@@ -392,6 +392,10 @@ https://github.com/keplerproject/orbit
 
 ## PHP C
 
+https://github.com/bukka/php-jsond
+
+https://github.com/D1W0U/php-security
+
 https://github.com/lchb369/appnet
 
 https://github.com/NoiseByNorthwest/php-spx
