@@ -1004,6 +1004,10 @@ https://github.com/wmandai/FreelancerOffice
 
 # Game
 
+https://sourceforge.net/projects/romance/
+
+https://github.com/q-gears/q-gears
+
 https://sourceforge.net/projects/eftihia
 
 https://sourceforge.net/p/commrpg
