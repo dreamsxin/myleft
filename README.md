@@ -114,7 +114,13 @@ https://github.com/mongrel2/mongrel2
 
 https://github.com/x42/liboauth
 
-# C asynchronous I/O && Coroutine
+## C Cache
+
+https://github.com/recoilme/okdb
+
+https://github.com/gsun/whitedb
+
+## C asynchronous I/O && Coroutine
 
 https://github.com/reginaldl/librinoo
 
@@ -146,21 +152,21 @@ https://github.com/xphh/coroutine
 
 https://github.com/stevedekorte/coroutine
 
-# C MPI
+## C MPI
 
 https://github.com/open-mpi/ompi
 
-# C monitoring
+## C monitoring
 
 https://github.com/firehol/netdata
 
-# C Secure && 安全
+## C Secure && 安全
 
 https://github.com/cossacklabs/themis
 
 https://github.com/hsleisink/hiawatha
 
-# C Websocket
+## C Websocket
 
 https://github.com/boazsegev/iodine
 
@@ -568,6 +574,8 @@ https://github.com/dreamsxin/php_riak
 
 ## CPP && C++
 
+https://github.com/noahdesu/zlog
+
 https://github.com/infinisql/infinisql
 
 https://github.com/scanner-research/scanner
@@ -747,6 +755,10 @@ https://github.com/thrill/thrill
 https://github.com/onyx-platform/onyx
 
 # GO
+
+https://github.com/boltdb/bolt
+
+https://github.com/dgraph-io/badger
 
 https://github.com/sosedoff/pgweb
 
@@ -2024,6 +2036,8 @@ https://github.com/ivanceras/rustorm
 
 https://github.com/diesel-rs/diesel
 
+https://github.com/PumpkinDB/PumpkinDB
+
 https://github.com/iron/iron
 
 https://github.com/nickel-org/nickel.rs
@@ -2039,6 +2053,10 @@ https://github.com/majorz/apache2-rs
 https://github.com/Jenyay/citystreetlist
 
 https://github.com/deuterium-orm/deuterium-orm
+
+##  Scala
+
+https://github.com/justin-db/JustinDB
 
 ## Nim
 
