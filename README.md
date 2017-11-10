@@ -582,6 +582,8 @@ https://github.com/dreamsxin/php_riak
 
 ## CPP && C++
 
+https://github.com/scylladb/seastar
+
 https://github.com/noahdesu/zlog
 
 https://github.com/infinisql/infinisql
