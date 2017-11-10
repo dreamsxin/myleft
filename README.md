@@ -1,8 +1,16 @@
 # C
 
+https://github.com/nidium/libapenetwork
+
+https://github.com/creytiv/re
+
 https://github.com/varnishcache/varnish-cache
 
 https://github.com/ccache/ccache
+
+https://github.com/mopemope/meinheld
+
+https://github.com/zhaojh329/evmongoose
 
 https://github.com/openresty/srcache-nginx-module
 
