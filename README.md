@@ -324,6 +324,8 @@ https://github.com/umbrellary/openwrt-cc
 
 ## PostgreSQL
 
+https://github.com/pgRouting/pgrouting
+
 https://github.com/saaros/pgbloomfun
 
 https://github.com/postgrespro/MonQ
