@@ -1072,6 +1072,10 @@ https://github.com/wmandai/FreelancerOffice
 
 # Game
 
+https://github.com/BZFlag-Dev/bzflag
+
+https://github.com/stuntrally/stuntrally
+
 https://sourceforge.net/projects/romance/
 
 https://github.com/q-gears/q-gears
@@ -1267,6 +1271,8 @@ https://github.com/pmer/TsunagariC
 https://github.com/borf/Browedit
 
 ## Game Engine
+
+https://github.com/AtomicGameEngine/AtomicGameEngine
 
 https://sourceforge.net/projects/quakespasm/
 
