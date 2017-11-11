@@ -210,7 +210,15 @@ https://github.com/tarantool/nginx_upstream_module
 
 https://github.com/slact/nchan
 
+# D
+
+https://github.com/Circular-Studios/Dash
+
+https://github.com/zeDoctor/PuzzleDash
+
 # Blender
+
+https://github.com/armory3d/armory
 
 https://github.com/UPBGE/blender
 
@@ -293,6 +301,10 @@ https://github.com/nikhilm/uvbook
 https://github.com/ptomato/gnome-inform7
 
 # Java
+
+https://github.com/libgdx/libgdx
+
+https://github.com/mbrlabs/Mundus
 
 https://github.com/jphp-compiler/jphp
 
@@ -1721,7 +1733,9 @@ https://github.com/polgiron/chartme
 
 https://github.com/dreamsxin/g.raphael
 
-HTML5 Game
+## HTML5 Game
+
+https://github.com/lo-th/3d.city
 
 https://github.com/freeciv/freeciv-web
 
