@@ -766,6 +766,8 @@ https://github.com/onyx-platform/onyx
 
 # GO
 
+https://github.com/pilosa/pilosa
+
 https://github.com/boltdb/bolt
 
 https://github.com/dgraph-io/badger
