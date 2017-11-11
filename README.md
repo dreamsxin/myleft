@@ -1743,6 +1743,8 @@ https://github.com/dreamsxin/g.raphael
 
 ## HTML5 Game
 
+https://github.com/irrelon/ige
+
 https://github.com/lo-th/3d.city
 
 https://github.com/freeciv/freeciv-web
