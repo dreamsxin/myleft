@@ -302,6 +302,8 @@ https://github.com/ptomato/gnome-inform7
 
 # Java
 
+https://github.com/jMonkeyEngine/jmonkeyengine
+
 https://github.com/libgdx/libgdx
 
 https://github.com/mbrlabs/Mundus
