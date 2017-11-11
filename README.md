@@ -2254,6 +2254,10 @@ https://github.com/geany/geany
 
 # Deep Learning && 机器学习 && 深度学习 && 图片识别
 
+https://github.com/BVLC/caffe
+
+https://github.com/caffe2/caffe2
+
 https://github.com/PaddlePaddle/Paddle
 
 https://github.com/FALCONN-LIB/FALCONN
@@ -2323,8 +2327,6 @@ https://github.com/yahoo/TensorFlowOnSpark
 https://github.com/bashrc/libdeep
 
 https://github.com/ChrisCummins/clgen
-
-https://github.com/BVLC/caffe
 
 https://github.com/tiny-dnn/tiny-dnn
 
