@@ -316,6 +316,8 @@ https://github.com/MrHus/Zelda
 
 https://github.com/igniterealtime/Openfire
 
+https://github.com/threerings/nenya
+
 ## Javascript engine
 
 https://github.com/jerryscript-project/jerryscript
@@ -1273,6 +1275,8 @@ https://github.com/pmer/TsunagariC
 https://github.com/borf/Browedit
 
 ## Game Engine
+
+https://github.com/gemrb/gemrb
 
 https://github.com/AtomicGameEngine/AtomicGameEngine
 
