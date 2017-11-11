@@ -281,11 +281,36 @@ https://github.com/AlloVince/physics_mathematics_skills_for_game_development
 
 https://github.com/me115/linuxtools_rst
 
-# Language
+# Language && programming language
+
+https://github.com/ring-lang/ring
+
+
+https://github.com/nim-lang/Nim
 
 https://github.com/orange-lang/orange
 
 https://github.com/ponylang/ponyc
+
+https://github.com/crystal-lang/crystal
+
+https://github.com/munificent/wren
+
+https://github.com/dart-lang/sdk
+
+https://github.com/ethereum/solidity
+
+https://github.com/JetBrains/kotlin
+
+https://github.com/dotlang/language
+
+https://github.com/clojure/clojure
+
+https://github.com/gosu-lang/gosu-lang
+
+https://github.com/flix/flix
+
+https://github.com/gingerBill/Odin
 
 # IM && XMPP && SIP
 
@@ -2100,11 +2125,9 @@ https://github.com/deuterium-orm/deuterium-orm
 
 ##  Scala
 
+https://github.com/scala/scala
+
 https://github.com/justin-db/JustinDB
-
-## Nim
-
-https://github.com/nim-lang/Nim
 
 # Xamarin
 
@@ -2157,6 +2180,8 @@ https://github.com/openstreetmap/chef
 https://github.com/openstreetmap/cgimap
 
 # Python
+
+https://github.com/python/cpython
 
 https://github.com/dask/distributed
 
