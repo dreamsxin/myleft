@@ -387,21 +387,23 @@ https://github.com/orafce/orafce
 
 https://github.com/citusdata/citus
 
-https://github.com/citusdata/cstore_fdw
-
 https://github.com/pramsey/pgsql-http
+
+https://github.com/citusdata/cstore_fdw
 
 https://github.com/EnterpriseDB/hdfs_fdw
 
 https://github.com/EnterpriseDB/mongo_fdw
 
-https://github.com/ChristophBerg/postgresql-unit
+https://github.com/pg-redis-fdw/redis_fdw
 
 https://github.com/tds-fdw/tds_fdw
 
-https://github.com/umitanuki/tinyint-postgresql
-
 https://github.com/laurenz/oracle_fdw
+
+https://github.com/ChristophBerg/postgresql-unit
+
+https://github.com/umitanuki/tinyint-postgresql
 
 https://github.com/2ndQuadrant/pglogical
 
