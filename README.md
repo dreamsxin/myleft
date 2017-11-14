@@ -2413,6 +2413,12 @@ https://github.com/nndl/nndl.github.io
 
 https://github.com/ShomyLiu/stat-learn
 
+## Distributed file system
+
+https://github.com/lizardfs/lizardfs
+
+https://github.com/happyfish100/fastdfs
+
 ## Distributed scheduler
 
 https://github.com/facebook/bistro （https://facebook.github.io/bistro/）
