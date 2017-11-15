@@ -1953,6 +1953,12 @@ https://github.com/Semantic-Org/Semantic-UI
 
 # Bootstrap
 
+https://github.com/misterGF/CoPilot
+
+https://github.com/almasaeed2010/AdminLTE
+
+https://github.com/puikinsh/gentelella
+
 https://github.com/craftpip/jquery-confirm
 
 https://github.com/yuche/vue-strap
