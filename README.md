@@ -1119,7 +1119,25 @@ https://sourceforge.net/p/commrpg
 
 https://sourceforge.net/projects/erebusrpg
 
+https://sourceforge.net/projects/sunderworld
+
+https://sourceforge.net/projects/irrrpgbuilder
+
+https://sourceforge.net/projects/planeshift/
+
 https://play0ad.com/
+
+https://gitlab.com/freedroid/freedroid-src
+
+https://gitlab.com/groups/xonotic
+
+https://bitbucket.org/allacrost/allacrost
+
+https://bitbucket.org/ryzom/ryzomcore/commits/all
+
+https://github.com/tizian/Cendric2
+
+https://github.com/VDrift/vdrift/
 
 https://github.com/solarus-games/solarus
 
