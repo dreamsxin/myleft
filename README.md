@@ -1117,6 +1117,10 @@ https://sourceforge.net/projects/eftihia
 
 https://sourceforge.net/p/commrpg
 
+https://sourceforge.net/projects/erebusrpg
+
+https://play0ad.com/
+
 https://github.com/solarus-games/solarus
 
 https://github.com/solarus-games/children-of-solarus
