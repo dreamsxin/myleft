@@ -1,5 +1,7 @@
 # C
 
+https://github.com/tiian/lixa
+
 https://github.com/nidium/libapenetwork
 
 https://github.com/creytiv/re
@@ -329,6 +331,8 @@ https://github.com/ptomato/gnome-inform7
 
 # Java
 
+https://github.com/palantir/atlasdb
+
 https://github.com/jMonkeyEngine/jmonkeyengine
 
 https://github.com/libgdx/libgdx
@@ -466,6 +470,8 @@ https://github.com/postgres-plr/plr
 https://github.com/aurynn/postgres-js
 
 https://github.com/nordmenss/pgcurl
+
+https://github.com/postgrespro/pg_tsdtm
 
 ## lua
 
