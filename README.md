@@ -853,6 +853,14 @@ https://github.com/ethanhugg/ikran
 
 https://github.com/firebreath/FireBreath
 
+https://github.com/mozilla-mobile/firefox-ios
+
+https://github.com/mozilla-mobile/focus-android
+
+https://github.com/mozilla/gecko-dev
+
+https://github.com/mdn/webextensions-examples
+
 ## RTMP
 
 https://github.com/MonaSolutions/MonaServer
