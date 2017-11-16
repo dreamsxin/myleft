@@ -865,6 +865,8 @@ https://github.com/servo/gecko-media
 
 https://github.com/mdn/webextensions-examples
 
+https://github.com/adblockplus/libadblockplus
+
 ## RTMP
 
 https://github.com/MonaSolutions/MonaServer
