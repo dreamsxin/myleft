@@ -2453,6 +2453,8 @@ https://github.com/arangodb/arangodb
 
 https://github.com/bitnine-oss/agensgraph
 
+https://github.com/dgraph-io/dgraph
+
 # 分布式 && 大数据 && NoSQL 数据库
 
 https://github.com/MonetDB/MonetDB
