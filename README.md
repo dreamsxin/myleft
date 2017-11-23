@@ -1,8 +1,36 @@
 # C
 
+https://github.com/tiian/lixa
+
+https://github.com/nidium/libapenetwork
+
+https://github.com/creytiv/re
+
+https://github.com/varnishcache/varnish-cache
+
+https://github.com/ccache/ccache
+
+https://github.com/mopemope/meinheld
+
+https://github.com/zhaojh329/evmongoose
+
+https://github.com/openresty/srcache-nginx-module
+
+https://github.com/allinurl/goaccess
+
+https://github.com/endurox-dev/endurox
+
+https://github.com/lathiat/avahi
+
+https://github.com/armon/bloomd
+
+https://github.com/Snawoot/bloom
+
 https://github.com/corosync/corosync
 
 https://github.com/brg-liuwei/ngx_kafka_module
+
+https://github.com/riolet/WAFer
 
 https://github.com/civetweb/civetweb
 
@@ -42,8 +70,6 @@ https://github.com/libMesh/libmesh
 
 https://github.com/libtom/libtomcrypt
 
-https://github.com/tatsuhiro-t/wslay
-
 https://github.com/ellson/graphviz
 
 https://github.com/zserge/pt
@@ -68,12 +94,6 @@ https://github.com/mojaves/craneweb
 
 https://github.com/myun2/nitro
 
-https://github.com/boazsegev/facil.io
-
-https://github.com/payden/libwebsock
-
-https://github.com/machinezone/tcpkali
-
 https://github.com/avshabanov/TinyCC
 
 https://github.com/disconnect/apache-websocket
@@ -85,10 +105,6 @@ https://github.com/h2o/h2o
 https://github.com/svn2github/libmicrohttpd
 
 https://github.com/monkey/monkey
-
-https://github.com/davidmoreno/onion
-
-https://github.com/cesanta/mongoose
 
 https://github.com/P-star/P-star
 
@@ -108,7 +124,13 @@ https://github.com/mongrel2/mongrel2
 
 https://github.com/x42/liboauth
 
-# C asynchronous I/O && Coroutine
+## C Cache
+
+https://github.com/recoilme/okdb
+
+https://github.com/gsun/whitedb
+
+## C asynchronous I/O && Coroutine
 
 https://github.com/reginaldl/librinoo
 
@@ -140,17 +162,90 @@ https://github.com/xphh/coroutine
 
 https://github.com/stevedekorte/coroutine
 
-# C MPI
+## C MPI
 
 https://github.com/open-mpi/ompi
 
-# C monitoring
+## C monitoring
 
 https://github.com/firehol/netdata
 
-# C Secure && 安全
+## C Secure && 安全
 
 https://github.com/cossacklabs/themis
+
+https://github.com/hsleisink/hiawatha
+
+## C Websocket
+
+https://github.com/boazsegev/iodine
+
+https://github.com/boazsegev/facil.io
+
+https://github.com/payden/libwebsock
+
+https://github.com/tatsuhiro-t/wslay
+
+https://github.com/mortzdk/Websocket
+
+https://github.com/warmcat/libwebsockets
+
+https://github.com/php-ion/websocket-parser
+
+https://github.com/ASPLes/nopoll
+
+https://github.com/davidmoreno/onion
+
+https://github.com/cesanta/mongoose
+
+https://github.com/allinurl/gwsocket
+
+# Websocket && Tools
+
+https://github.com/gorilla/websocket
+
+https://github.com/tsl0922/ttyd
+
+https://github.com/machinezone/tcpkali
+
+https://github.com/tarantool/nginx_upstream_module
+
+https://github.com/slact/nchan
+
+# D
+
+https://github.com/Circular-Studios/Dash
+
+https://github.com/zeDoctor/PuzzleDash
+
+# Blender
+
+https://github.com/armory3d/armory
+
+https://github.com/UPBGE/blender
+
+https://github.com/lubosz/HoVR
+
+https://cloud.blender.org/p/dailydweebs/
+
+https://cloud.blender.org/p/monkaa/
+
+https://cloud.blender.org/p/spring
+
+
+# 安全扫描
+
+https://github.com/We5ter/Scanners-Box
+
+https://github.com/future-architect/vuls
+
+https://github.com/presidentbeef/brakeman
+
+https://github.com/psecio/iniscan
+
+https://github.com/psecio/parse
+
+https://github.com/scr34m/php-malware-scanner
 
 # NoSQL
 
@@ -188,9 +283,36 @@ https://github.com/AlloVince/physics_mathematics_skills_for_game_development
 
 https://github.com/me115/linuxtools_rst
 
-# Language
+# Language && programming language
+
+https://github.com/ring-lang/ring
+
+
+https://github.com/nim-lang/Nim
 
 https://github.com/orange-lang/orange
+
+https://github.com/ponylang/ponyc
+
+https://github.com/crystal-lang/crystal
+
+https://github.com/munificent/wren
+
+https://github.com/dart-lang/sdk
+
+https://github.com/ethereum/solidity
+
+https://github.com/JetBrains/kotlin
+
+https://github.com/dotlang/language
+
+https://github.com/clojure/clojure
+
+https://github.com/gosu-lang/gosu-lang
+
+https://github.com/flix/flix
+
+https://github.com/gingerBill/Odin
 
 # IM && XMPP && SIP
 
@@ -209,11 +331,23 @@ https://github.com/ptomato/gnome-inform7
 
 # Java
 
+https://github.com/palantir/atlasdb
+
+https://github.com/jMonkeyEngine/jmonkeyengine
+
+https://github.com/libgdx/libgdx
+
+https://github.com/mbrlabs/Mundus
+
+https://github.com/jphp-compiler/jphp
+
 https://github.com/apache/incubator-superset 开源的数据分析与可视化平台
 
 https://github.com/MrHus/Zelda
 
 https://github.com/igniterealtime/Openfire
+
+https://github.com/threerings/nenya
 
 ## Javascript engine
 
@@ -237,6 +371,10 @@ https://github.com/umbrellary/openwrt-cc
 
 ## PostgreSQL
 
+https://github.com/pgRouting/pgrouting
+
+https://github.com/saaros/pgbloomfun
+
 https://github.com/postgrespro/MonQ
 
 https://github.com/aggregateknowledge/postgresql-hll
@@ -253,21 +391,23 @@ https://github.com/orafce/orafce
 
 https://github.com/citusdata/citus
 
-https://github.com/citusdata/cstore_fdw
-
 https://github.com/pramsey/pgsql-http
+
+https://github.com/citusdata/cstore_fdw
 
 https://github.com/EnterpriseDB/hdfs_fdw
 
 https://github.com/EnterpriseDB/mongo_fdw
 
-https://github.com/ChristophBerg/postgresql-unit
+https://github.com/pg-redis-fdw/redis_fdw
 
 https://github.com/tds-fdw/tds_fdw
 
-https://github.com/umitanuki/tinyint-postgresql
-
 https://github.com/laurenz/oracle_fdw
+
+https://github.com/ChristophBerg/postgresql-unit
+
+https://github.com/umitanuki/tinyint-postgresql
 
 https://github.com/2ndQuadrant/pglogical
 
@@ -331,6 +471,8 @@ https://github.com/aurynn/postgres-js
 
 https://github.com/nordmenss/pgcurl
 
+https://github.com/postgrespro/pg_tsdtm
+
 ## lua
 
 https://github.com/lua/lua
@@ -346,6 +488,14 @@ https://github.com/sailorproject/sailor
 https://github.com/keplerproject/orbit
 
 ## PHP C
+
+https://github.com/happyfish100/libshmcache
+
+https://github.com/bukka/php-jsond
+
+https://github.com/D1W0U/php-security
+
+https://github.com/lchb369/appnet
 
 https://github.com/NoiseByNorthwest/php-spx
 
@@ -483,7 +633,17 @@ https://github.com/AOP-PHP/AOP
 
 https://github.com/dreamsxin/php_riak
 
-## CPP
+## CPP && C++
+
+http://djvu.sourceforge.net/
+
+https://github.com/scylladb/seastar
+
+https://github.com/noahdesu/zlog
+
+https://github.com/infinisql/infinisql
+
+https://github.com/scanner-research/scanner
 
 https://github.com/cachelot/cachelot
 
@@ -528,8 +688,6 @@ https://github.com/eduardobeloni/jsonrpc-cpp
 https://github.com/makerbot/jsonrpc
 
 https://github.com/interactive-matter/aJson
-
-https://github.com/warmcat/libwebsockets
 
 https://github.com/ideawu/icomet
 
@@ -651,15 +809,35 @@ https://github.com/boostorg/coroutine2
 
 https://github.com/boostorg/mpi
 
+https://github.com/haptork/easyLambda
+
 ## C++ Distributed
 
 https://github.com/thrill/thrill
 
+##  Clojure
+
+https://github.com/onyx-platform/onyx
+
 # GO
 
-https://github.com/gin-gonic/gin
+https://github.com/pilosa/pilosa
+
+https://github.com/boltdb/bolt
+
+https://github.com/dgraph-io/badger
+
+https://github.com/sosedoff/pgweb
+
+https://github.com/coreos/etcd
 
 https://github.com/hashicorp/consul
+
+https://github.com/oklog/oklog
+
+https://github.com/ha/doozerd
+
+https://github.com/gin-gonic/gin
 
 https://github.com/kataras/iris
 
@@ -681,6 +859,20 @@ https://github.com/ethanhugg/ikran
 
 https://github.com/firebreath/FireBreath
 
+https://github.com/mozilla-mobile/firefox-ios
+
+https://github.com/mozilla-mobile/focus-android
+
+https://github.com/mozilla/gecko-dev
+
+https://github.com/servo/servo
+
+https://github.com/servo/gecko-media
+
+https://github.com/mdn/webextensions-examples
+
+https://github.com/adblockplus/libadblockplus
+
 ## RTMP
 
 https://github.com/MonaSolutions/MonaServer
@@ -692,6 +884,8 @@ https://github.com/dreamsxin/crtmp
 https://github.com/keyanmca/lmss
 
 # Nginx
+
+https://github.com/iresty/Mio
 
 https://github.com/chronolaw/ngx_cpp_dev
 
@@ -933,6 +1127,40 @@ https://github.com/wmandai/FreelancerOffice
 
 # Game
 
+https://github.com/BZFlag-Dev/bzflag
+
+https://github.com/stuntrally/stuntrally
+
+https://sourceforge.net/projects/romance/
+
+https://github.com/q-gears/q-gears
+
+https://sourceforge.net/projects/eftihia
+
+https://sourceforge.net/p/commrpg
+
+https://sourceforge.net/projects/erebusrpg
+
+https://sourceforge.net/projects/sunderworld
+
+https://sourceforge.net/projects/irrrpgbuilder
+
+https://sourceforge.net/projects/planeshift/
+
+https://play0ad.com/
+
+https://gitlab.com/freedroid/freedroid-src
+
+https://gitlab.com/groups/xonotic
+
+https://bitbucket.org/allacrost/allacrost
+
+https://bitbucket.org/ryzom/ryzomcore/commits/all
+
+https://github.com/tizian/Cendric2
+
+https://github.com/VDrift/vdrift/
+
 https://github.com/solarus-games/solarus
 
 https://github.com/solarus-games/children-of-solarus
@@ -1120,6 +1348,20 @@ https://github.com/pmer/TsunagariC
 https://github.com/borf/Browedit
 
 ## Game Engine
+
+https://github.com/gemrb/gemrb
+
+https://github.com/AtomicGameEngine/AtomicGameEngine
+
+https://sourceforge.net/projects/quakespasm/
+
+http://dengine.net/
+
+http://irrlicht.sourceforge.net/
+
+http://www.klayge.org/
+
+https://github.com/castle-engine/castle-engine
 
 https://github.com/Daivuk/onut
 
@@ -1444,52 +1686,6 @@ https://github.com/daneden/animate.css
 
 https://github.com/funkaster/ChesterGL
 
-# Javascript
-
-https://github.com/swmitra/html-designer
-
-https://github.com/adobe-webplatform/Snap.svg
-
-https://github.com/CreateJS
-
-https://github.com/mattboldt/typed.js/
-
-https://github.com/tweenjs/tween.js
-
-https://github.com/RubaXa/Sortable
-
-https://github.com/ksylvest/jquery-gridly
-
-https://github.com/codemirror/CodeMirror
-
-https://github.com/processone/oneteam
-
-https://github.com/apla/dataflo.ws
-
-https://github.com/nnnick/Chart.js
-
-https://github.com/reupen/tayberry
-
-https://github.com/emberjs/ember.js
-
-https://github.com/phetsims/scenery
-
-https://github.com/StardustEx/SmithChart
-
-https://github.com/imgly/imgly-sdk-html5
-
-https://github.com/PANmedia/raptor-editor
-
-https://github.com/RocketChat/Rocket.Chat
-
-https://github.com/liabru/matter-js
-
-https://github.com/Leaflet/Leaflet
-
-https://github.com/drojdjou/J3D
-
-https://github.com/andreasgal/pdf.js
-
 ## Chart
 
 https://github.com/dabeng/OrgChart
@@ -1576,7 +1772,13 @@ https://github.com/polgiron/chartme
 
 https://github.com/dreamsxin/g.raphael
 
-HTML5 Game
+## HTML5 Game
+
+https://github.com/irrelon/ige
+
+https://github.com/lo-th/3d.city
+
+https://github.com/freeciv/freeciv-web
 
 https://github.com/jdan/isomer
 
@@ -1615,18 +1817,6 @@ https://github.com/gehy1/chromiumembedded
 https://github.com/thoughtbot/capybara-webkit
 
 https://github.com/snowshoe/snowshoe
-
-# Mobile application framework
-
-https://github.com/rhomobile/rhodes
-
-# Jquery
-
-https://github.com/RubaXa/jquery.fileapi
-
-https://github.com/mailru/FileAPI
-
-https://github.com/tapmodo/Jcrop
 
 # Browser
 
@@ -1711,7 +1901,7 @@ https://github.com/Eugeny/ajenti/
 https://github.com/fluent/fluentd
 
 
-# SCRIPT
+# SCRIPT Language
 
 https://github.com/esrrhs/fakescript
 
@@ -1719,11 +1909,99 @@ https://github.com/ChaiScript/ChaiScript
 
 https://github.com/lua/lua
 
+# Mobile application framework
+
+https://github.com/rhomobile/rhodes
+
+# Jquery
+
+https://github.com/RubaXa/jquery.fileapi
+
+https://github.com/mailru/FileAPI
+
+https://github.com/tapmodo/Jcrop
+
+# Javascript
+
+https://github.com/tastejs/todomvc
+
+https://github.com/swmitra/html-designer
+
+https://github.com/adobe-webplatform/Snap.svg
+
+https://github.com/CreateJS
+
+https://github.com/mattboldt/typed.js/
+
+https://github.com/tweenjs/tween.js
+
+https://github.com/RubaXa/Sortable
+
+https://github.com/ksylvest/jquery-gridly
+
+https://github.com/codemirror/CodeMirror
+
+https://github.com/processone/oneteam
+
+https://github.com/apla/dataflo.ws
+
+https://github.com/nnnick/Chart.js
+
+https://github.com/reupen/tayberry
+
+https://github.com/phetsims/scenery
+
+https://github.com/StardustEx/SmithChart
+
+https://github.com/imgly/imgly-sdk-html5
+
+https://github.com/PANmedia/raptor-editor
+
+https://github.com/RocketChat/Rocket.Chat
+
+https://github.com/liabru/matter-js
+
+https://github.com/Leaflet/Leaflet
+
+https://github.com/drojdjou/J3D
+
+https://github.com/andreasgal/pdf.js
+
+## Javascript Framework
+
+https://github.com/facebook/react-native
+
+https://github.com/emberjs/ember.js
+
+https://github.com/socketio/socket.io
+
+https://github.com/vuejs/vue
+
+## Vue
+
+https://github.com/bootstrap-vue/bootstrap-vue
+
+https://github.com/matfish2/vue-tables-2
+
+## CSS Framework
+
+https://github.com/twbs/bootstrap
+
+https://github.com/Dogfalo/materialize
+
+https://github.com/zurb/foundation-sites
+
 # Semantic-UI
 
 https://github.com/Semantic-Org/Semantic-UI
 
 # Bootstrap
+
+https://github.com/misterGF/CoPilot
+
+https://github.com/almasaeed2010/AdminLTE
+
+https://github.com/puikinsh/gentelella
 
 https://github.com/craftpip/jquery-confirm
 
@@ -1732,8 +2010,6 @@ https://github.com/yuche/vue-strap
 https://github.com/kartik-v/bootstrap-fileinput
 
 https://github.com/ehpc/bootstrap-waitingfor
-
-https://github.com/twbs/bootstrap
 
 https://github.com/jasny/bootstrap
 
@@ -1903,6 +2179,8 @@ https://github.com/ivanceras/rustorm
 
 https://github.com/diesel-rs/diesel
 
+https://github.com/PumpkinDB/PumpkinDB
+
 https://github.com/iron/iron
 
 https://github.com/nickel-org/nickel.rs
@@ -1919,9 +2197,11 @@ https://github.com/Jenyay/citystreetlist
 
 https://github.com/deuterium-orm/deuterium-orm
 
-## Nim
+##  Scala
 
-https://github.com/nim-lang/Nim
+https://github.com/scala/scala
+
+https://github.com/justin-db/JustinDB
 
 # Xamarin
 
@@ -1974,6 +2254,8 @@ https://github.com/openstreetmap/chef
 https://github.com/openstreetmap/cgimap
 
 # Python
+
+https://github.com/python/cpython
 
 https://github.com/dask/distributed
 
@@ -2071,6 +2353,12 @@ https://github.com/geany/geany
 
 # Deep Learning && 机器学习 && 深度学习 && 图片识别
 
+https://github.com/BVLC/caffe
+
+https://github.com/caffe2/caffe2
+
+https://github.com/PaddlePaddle/Paddle
+
 https://github.com/FALCONN-LIB/FALCONN
 
 https://github.com/facebookresearch/faiss/
@@ -2139,8 +2427,6 @@ https://github.com/bashrc/libdeep
 
 https://github.com/ChrisCummins/clgen
 
-https://github.com/BVLC/caffe
-
 https://github.com/tiny-dnn/tiny-dnn
 
 https://github.com/justinledford/kmc-ic'
@@ -2166,6 +2452,8 @@ https://github.com/cmaloney/orly
 https://github.com/arangodb/arangodb
 
 https://github.com/bitnine-oss/agensgraph
+
+https://github.com/dgraph-io/dgraph
 
 # 分布式 && 大数据 && NoSQL 数据库
 
@@ -2201,6 +2489,12 @@ https://github.com/nndl/nndl.github.io
 
 https://github.com/ShomyLiu/stat-learn
 
+## Distributed file system
+
+https://github.com/lizardfs/lizardfs
+
+https://github.com/happyfish100/fastdfs
+
 ## Distributed scheduler
 
 https://github.com/facebook/bistro （https://facebook.github.io/bistro/）
@@ -2212,3 +2506,17 @@ https://github.com/liuxunorg/FastDCS
 https://github.com/shakamunyi/mesos
 
 https://github.com/mesosphere/marathon
+
+## 负载均衡 && load balancer
+
+https://github.com/acassen/keepalived
+
+https://github.com/corosync/corosync
+
+https://github.com/ClusterLabs/pacemaker
+
+https://github.com/iqiyi/dpvs
+
+## 工具
+
+https://github.com/geogebra/geogebra （动态几何软件）
