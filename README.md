@@ -489,6 +489,8 @@ https://github.com/keplerproject/orbit
 
 ## PHP C
 
+https://github.com/phpize7/php-rocksdb
+
 https://github.com/happyfish100/libshmcache
 
 https://github.com/bukka/php-jsond
@@ -2307,7 +2309,7 @@ https://github.com/RedisLabsModules/RediSearch
 
 # rust
 
-https://github.com/pingcap/tikv
+* https://github.com/pingcap/tikv
 
 https://github.com/nickel-org/nickel.rs
 
@@ -2456,6 +2458,10 @@ https://github.com/bitnine-oss/agensgraph
 https://github.com/dgraph-io/dgraph
 
 # 分布式 && 大数据 && NoSQL 数据库
+
+https://github.com/pingcap/tikv
+
+https://github.com/reborndb/reborn
 
 https://github.com/MonetDB/MonetDB
 
