@@ -2459,6 +2459,8 @@ https://github.com/dgraph-io/dgraph
 
 # 分布式 && 大数据 && NoSQL 数据库
 
+https://github.com/pingcap/tidb
+
 https://github.com/pingcap/tikv
 
 https://github.com/reborndb/reborn
