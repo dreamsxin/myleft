@@ -2,7 +2,7 @@
 // phpBB 3.1.x auto-generated configuration file
 // Do not change anything in this file!
 $dbms = 'phpbb\\db\\driver\\postgres';
-$dbhost = 'localhost';
+$dbhost = '127.0.0.1';
 $dbport = '';
 $dbname = 'myleftstudio';
 $dbuser = 'postgres';

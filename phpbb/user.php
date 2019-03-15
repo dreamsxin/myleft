@@ -189,6 +189,9 @@ class user extends \phpbb\session
 		/**
 		* Event to load language files and modify user data on every page
 		*
+		* Note: To load language file with this event, see description
+		* of lang_set_ext variable.
+		*
 		* @event core.user_setup
 		* @var	array	user_data			Array with user's data row
 		* @var	string	user_lang_name		Basename of the user's langauge
@@ -269,24 +272,6 @@ class user extends \phpbb\session
 		if (!$this->style && $style_id != $this->data['user_style'])
 		{
 			$style_id = $this->data['user_style'];
-
-			$sql = 'SELECT *
-				FROM ' . STYLES_TABLE . " s
-				WHERE s.style_id = $style_id";
-			$result = $db->sql_query($sql, 3600);
-			$this->style = $db->sql_fetchrow($result);
-			$db->sql_freeresult($result);
-		}
-
-		// User has wrong style
-		if (!$this->style && $style_id == $this->data['user_style'])
-		{
-			$style_id = $this->data['user_style'] = $config['default_style'];
-
-			$sql = 'UPDATE ' . USERS_TABLE . "
-				SET user_style = $style_id
-				WHERE user_id = {$this->data['user_id']}";
-			$db->sql_query($sql);
 
 			$sql = 'SELECT *
 				FROM ' . STYLES_TABLE . " s

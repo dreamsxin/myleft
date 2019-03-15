@@ -1,4 +1,62 @@
+# 安装
+
+```shell
+sudo -u postgres psql -d myleftstudio -f store/backup.sql
+```
+
 # C
+
+https://github.com/igraph/igraph
+
+https://github.com/freenode/ircd-seven
+
+https://github.com/letoram/arcan
+
+https://github.com/netdata/netdata
+
+https://github.com/guenchi/Igropyr
+
+https://github.com/Taymindis/lfqueue
+
+https://github.com/naver/arcus-memcached
+
+https://github.com/naver/arcus-zookeeper
+
+https://github.com/acl-dev/libfiber
+
+https://github.com/Tencent/libco
+
+https://github.com/sustrik/libmill
+
+https://github.com/sustrik/libdill
+
+https://github.com/baruch/libwire
+
+https://github.com/saprykin/plibsys
+
+https://github.com/Lede-Inc/cetus
+
+https://github.com/pranjalverma/CS50x
+
+https://github.com/v3l0c1r4pt0r/imeitool
+
+https://github.com/alperakcan/mbus
+
+https://github.com/andoma/libsvc
+
+https://github.com/troglobit/watchdogd
+
+https://github.com/meetrp/pcd
+
+https://github.com/kil/ubervisor
+
+https://github.com/fsmi/rpcd
+
+https://github.com/imgix/eddy
+
+https://github.com/antirez/redis
+
+https://github.com/alibaba/ApsaraCache
 
 https://github.com/tiian/lixa
 
@@ -100,8 +158,6 @@ https://github.com/disconnect/apache-websocket
 
 https://github.com/SaiFi0102/WebWidgets/
 
-https://github.com/h2o/h2o
-
 https://github.com/svn2github/libmicrohttpd
 
 https://github.com/monkey/monkey
@@ -123,6 +179,12 @@ https://github.com/stevedekorte/vertexdb
 https://github.com/mongrel2/mongrel2
 
 https://github.com/x42/liboauth
+
+## C Server
+
+https://github.com/lpereira/lwan
+
+https://github.com/h2o/h2o
 
 ## C Cache
 
@@ -232,6 +294,9 @@ https://cloud.blender.org/p/monkaa/
 
 https://cloud.blender.org/p/spring
 
+# Ruby
+
+https://github.com/ohler55/agoo
 
 # 安全扫描
 
@@ -331,6 +396,10 @@ https://github.com/ptomato/gnome-inform7
 
 # Java
 
+https://github.com/Netflix/eureka
+
+https://github.com/Netflix/ribbon
+
 https://github.com/palantir/atlasdb
 
 https://github.com/jMonkeyEngine/jmonkeyengine
@@ -348,6 +417,10 @@ https://github.com/MrHus/Zelda
 https://github.com/igniterealtime/Openfire
 
 https://github.com/threerings/nenya
+
+https://github.com/baidu/uid-generator
+
+https://github.com/zhuzhong/idleaf
 
 ## Javascript engine
 
@@ -370,6 +443,24 @@ https://github.com/Ntemis/openwrtcc
 https://github.com/umbrellary/openwrt-cc
 
 ## PostgreSQL
+
+https://github.com/dbcli/pgcli
+
+https://github.com/dreamsxin/pqc
+
+https://github.com/darold/uri
+
+https://github.com/okbob/pspg
+
+https://github.com/RhodiumToad/pllua-ng
+
+https://github.com/johnkaiser/qzforms
+
+https://github.com/csimsek/pgsql-fio
+
+https://github.com/RhodiumToad/uuid-freebsd/
+
+https://github.com/decibel/Qgres/
 
 https://github.com/pgRouting/pgrouting
 
@@ -488,6 +579,16 @@ https://github.com/sailorproject/sailor
 https://github.com/keplerproject/orbit
 
 ## PHP C
+
+https://github.com/dstogov/php-ffi
+
+https://github.com/tpunt/pht
+
+https://github.com/krakjoe/uopz
+
+https://github.com/php-memcached-dev/php-memcached
+
+https://github.com/nrk/phpiredis
 
 https://github.com/phpize7/php-rocksdb
 
@@ -613,6 +714,8 @@ https://github.com/rryqszq4/php7-ext-jsonrpc
 
 # PHP
 
+https://github.com/kosinix/grafika
+
 https://github.com/kohana/kohana
 
 https://github.com/phpbb/phpbb
@@ -636,6 +739,10 @@ https://github.com/AOP-PHP/AOP
 https://github.com/dreamsxin/php_riak
 
 ## CPP && C++
+
+https://github.com/conradsnicta/armadillo-code
+
+https://github.com/cseed/knotkit
 
 http://djvu.sourceforge.net/
 
@@ -823,6 +930,8 @@ https://github.com/onyx-platform/onyx
 
 # GO
 
+https://github.com/kubernetes/kubernetes
+
 https://github.com/pilosa/pilosa
 
 https://github.com/boltdb/bolt
@@ -887,6 +996,8 @@ https://github.com/keyanmca/lmss
 
 # Nginx
 
+https://github.com/Taymindis/ngx_lfqueue#usage
+
 https://github.com/iresty/Mio
 
 https://github.com/chronolaw/ngx_cpp_dev
@@ -904,6 +1015,8 @@ https://github.com/openresty/lua-nginx-module
 https://github.com/webcpp/hi-nginx
 
 # Android
+
+https://github.com/flutter/flutter
 
 https://github.com/FabianTerhorst/Isometric
 
@@ -1581,6 +1694,8 @@ https://github.com/Fenoxo/sourceTiTS
 
 # HTML5
 
+https://github.com/josdejong/jsoneditor
+
 https://github.com/lukasoppermann/html5sortable
 
 https://github.com/Convicted202/PixelShape
@@ -1999,6 +2114,8 @@ https://github.com/Semantic-Org/Semantic-UI
 
 # Bootstrap
 
+https://github.com/mistic100/Bootstrap-Confirmation
+
 https://github.com/misterGF/CoPilot
 
 https://github.com/almasaeed2010/AdminLTE
@@ -2219,6 +2336,8 @@ https://github.com/bitzhuwei/CSharpGL
 
 # Book
 
+https://github.com/DocsHome/microservices
+
 https://github.com/ruanyf/es6tutorial
 
 https://github.com/tobegit3hub/understand_linux_process
@@ -2230,6 +2349,8 @@ https://github.com/nylas/N1
 ## Other
 
 http://designcollector.net/serge-marshennikov-art/
+
+https://github.com/ariya/phantomjs
 
 # Nginx
 
@@ -2256,6 +2377,24 @@ https://github.com/openstreetmap/chef
 https://github.com/openstreetmap/cgimap
 
 # Python
+
+https://github.com/deepmind/sonnet
+
+https://github.com/celery/celery
+
+https://github.com/onnx/onnx
+
+https://github.com/Supervisor/supervisor
+
+https://github.com/aio-libs/aiohttp
+
+https://github.com/novnc/websockify
+
+https://github.com/crossbario/crossbar
+
+https://github.com/Lawouach/WebSocket-for-Python
+
+https://github.com/djacobs/PyAPNs
 
 https://github.com/python/cpython
 
@@ -2441,6 +2580,8 @@ https://github.com/CISOfy/lynis
 
 # Database
 
+https://github.com/ADBSQL/AntDB
+
 https://github.com/bloomberg/comdb2
 
 https://github.com/greenplum-db/gpdb
@@ -2459,7 +2600,15 @@ https://github.com/dgraph-io/dgraph
 
 # 分布式 && 大数据 && NoSQL 数据库
 
-https://github.com/pingcap/tidb
+https://github.com/rread/lustre
+
+https://github.com/ceph/ceph
+
+https://github.com/apache/accumulo
+
+https://github.com/pingcap/tidb （兼容 MySQL）
+
+https://github.com/cockroachdb/cockroach （兼容 PostgreSQL）
 
 https://github.com/pingcap/tikv
 
@@ -2524,6 +2673,174 @@ https://github.com/corosync/corosync
 https://github.com/ClusterLabs/pacemaker
 
 https://github.com/iqiyi/dpvs
+
+## 交易所 API
+
+https://github.com/viabtc/viabtc_exchange_server
+
+https://github.com/askmike/gekko
+
+https://github.com/ccxt/ccxt
+
+https://github.com/bitrich-info/xchange-stream
+
+https://github.com/knowm/XChange
+
+https://github.com/bisq-network/bisq-desktop
+
+https://github.com/michaelgrosner/tribeca
+
+https://github.com/zhouningyi/exchanges
+
+## 比特币 && 区块链（bitcoin && block chain）
+
+https://github.com/bitcoin/bitcoin
+
+https://github.com/btcsuite/btcd
+
+https://github.com/coinfoundry/miningcore
+
+https://github.com/btcsuite/btcwallet
+
+https://github.com/mycelium-com/wallet-android
+
+https://github.com/bitcoinj-cash/bitcoinj
+
+Http://github.com/Airbitz
+
+https://github.com/arcbit/arcbit-android
+
+https://github.com/litecoin-project/litecoin
+
+https://github.com/pooler/electrum-ltc
+
+https://github.com/bither/
+
+https://github.com/monero-project/monero
+
+https://github.com/ethereum/mist
+
+https://github.com/QuincySx/BlockchainWallet-Crypto
+
+https://github.com/ethereum/cpp-ethereum
+
+https://github.com/luke-jr/bfgminer
+
+https://github.com/ckolivas/cgminer
+
+https://github.com/jackjack-jj/pywallet
+
+https://github.com/Samourai-Wallet/samourai-wallet-android
+
+https://github.com/candlepin/candlepin
+
+https://github.com/ripple/ripple-lib
+
+https://github.com/ripple/ripple-lib-java
+
+https://github.com/butor/blackbird
+
+https://github.com/Bitclimb/coinglue
+
+https://github.com/coingecko/cryptoexchange
+
+https://github.com/johntitus/coinx
+
+https://github.com/bitcoin-wallet/bitcoin-wallet
+
+https://github.com/walleth/walleth
+
+https://github.com/breadwallet/breadwallet-android
+
+https://github.com/openwalletGH/openwallet-android
+
+https://github.com/CosmoJG/open-coinomi-android
+
+https://github.com/Coinomi/coinomi-android
+
+https://github.com/coinbase
+
+https://github.com/Jaxx-io/Jaxx
+
+https://github.com/sqrapp/sqrapp
+
+https://github.com/Multibit-Legacy/multibit
+
+https://github.com/paritytech/parity
+
+https://github.com/goatpig/BitcoinArmory
+
+https://github.com/CoinSpace/CoinSpace
+
+https://github.com/imfly/bitcoin-on-nodejs
+
+https://github.com/ryancdotorg/brainflayer
+
+https://github.com/bitpay/copay
+
+https://github.com/bitpay/bitcore-wallet-service
+
+https://github.com/btcontract/wallet
+
+https://github.com/blockchain/My-Wallet-V3-Android
+
+https://github.com/spesmilo/electrum
+
+https://github.com/libbitcoin/libbitcoin-server
+
+https://github.com/btcontract/lnwallet
+
+https://github.com/ACINQ/eclair
+
+https://github.com/ryancdotorg/brainflayer
+
+https://github.com/bitkey/bitkey
+
+https://github.com/moncho/warpwallet
+
+https://github.com/greenaddress/GreenBits
+
+https://github.com/Appscrunch/Multy-android
+
+https://github.com/jgarzik/picocoin
+
+https://github.com/jgarzik/python-bitcoinrpc
+
+https://github.com/bitpay/bitcore
+
+https://github.com/bitcoinbook/bitcoinbook/
+
+https://github.com/blinktrade/
+
+https://github.com/peatio/peatio
+
+https://github.com/MyceliumGear/straight-server
+
+https://github.com/nbobtc/bitcoind-php
+
+https://github.com/johnathanmartin/piWallet
+
+https://github.com/zcc0721/MasterBlockchain
+
+https://github.com/demistry/CryptoCur_App
+
+https://github.com/Airbitz/edge-core-js
+
+https://github.com/Airbitz/edge-react-gui
+
+https://github.com/MFrcoin/MFCoin
+
+https://github.com/MFrcoin/android-wallet
+
+## Coin Bot
+
+https://github.com/BitBotFactory/MikaLendingBot
+
+https://github.com/toirl/cointrader
+
+https://github.com/saniales/golang-crypto-trading-bot
+
+https://github.com/hastenax/poloniexBot
 
 ## 工具
 

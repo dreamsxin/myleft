@@ -344,7 +344,7 @@
 	}
 
 	fieldset dd, fieldset.fields1 dd, fieldset.fields2 dd {
-		margin-left: 20px;
+		margin-left: 0px;
 	}
 
 	textarea, dd textarea, .message-box textarea {
@@ -421,6 +421,7 @@
 	.column1, .column2, .left-box.profile-details {
 		float: none;
 		width: auto;
+		clear: both;
 	}
 
 	/* Polls
@@ -578,14 +579,5 @@
 
 	dd.posts, dd.topics, dd.views {
     	width: 80px;
-	}
-}
-
-@media (max-width: 992px) {
-	.row .pagination {
-		text-align: left;
-		float: left;
-		margin-top: 4px;
-		margin-bottom: 4px;
 	}
 }
