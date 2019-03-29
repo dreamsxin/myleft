@@ -238,6 +238,10 @@ https://github.com/cossacklabs/themis
 
 https://github.com/hsleisink/hiawatha
 
+## C Web
+
+https://github.com/jorisvink/kore
+
 ## C Websocket
 
 https://github.com/boazsegev/iodine
