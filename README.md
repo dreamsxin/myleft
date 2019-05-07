@@ -6,6 +6,8 @@ sudo -u postgres psql -d myleftstudio -f store/backup.sql
 
 # C
 
+https://github.com/Mandarancio/charter
+
 https://github.com/igraph/igraph
 
 https://github.com/freenode/ircd-seven
