@@ -2384,6 +2384,10 @@ https://github.com/openstreetmap/cgimap
 
 # Python
 
+https://github.com/kitao/pyxel
+
+https://github.com/flareteam/flare-game
+
 https://github.com/deepmind/sonnet
 
 https://github.com/celery/celery
