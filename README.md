@@ -720,6 +720,8 @@ https://github.com/t3rmin4t0r/php-fastlz
 
 https://github.com/rryqszq4/php7-ext-jsonrpc
 
+https://github.com/CismonX/ext-collections
+
 # PHP
 
 https://github.com/kosinix/grafika
