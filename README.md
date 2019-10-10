@@ -586,6 +586,8 @@ https://github.com/keplerproject/orbit
 
 ## PHP C
 
+https://github.com/phpsci/phpsci-ext
+
 https://github.com/dstogov/php-ffi
 
 https://github.com/tpunt/pht
@@ -717,6 +719,8 @@ https://github.com/reeze/php-ext-embed
 https://github.com/t3rmin4t0r/php-fastlz
 
 https://github.com/rryqszq4/php7-ext-jsonrpc
+
+https://github.com/CismonX/ext-collections
 
 # PHP
 
