@@ -586,6 +586,8 @@ https://github.com/keplerproject/orbit
 
 ## PHP C
 
+https://github.com/iagapie/ext-nump
+
 https://github.com/phpsci/phpsci-ext
 
 https://github.com/dstogov/php-ffi
