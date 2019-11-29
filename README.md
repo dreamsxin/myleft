@@ -6,6 +6,8 @@ sudo -u postgres psql -d myleftstudio -f store/backup.sql
 
 # C
 
+https://github.com/threefoldtech/0-db
+
 https://github.com/thesecretmaster/predis
 
 https://github.com/RedisTimeSeries/RedisTimeSeries
