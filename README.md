@@ -6,6 +6,40 @@ sudo -u postgres psql -d myleftstudio -f store/backup.sql
 
 # C
 
+https://github.com/RedisTimeSeries/RedisTimeSeries
+
+https://github.com/RedisAI/RedisAI
+
+https://github.com/RedisLabs/RedisModulesSDK
+
+https://github.com/RedisJSON/RedisJSON
+
+https://github.com/RedisGraph/RedisGraph
+
+https://github.com/RediSearch/RediSearch
+
+https://github.com/RedisBloom/RedisBloom
+
+https://github.com/ops-baidu/bdrp
+
+https://github.com/qiye/redis-storage
+
+https://github.com/vipshop/vire
+
+https://github.com/redis/hiredis
+
+https://github.com/nrk/phpiredis
+
+https://github.com/twitter/twemproxy
+
+https://github.com/ciniglio/acmq
+
+https://github.com/je-so/iqueue
+
+https://github.com/zouqinglei/LT
+
+https://github.com/storagXpert/lucidMQ
+
 https://github.com/Mandarancio/charter
 
 https://github.com/igraph/igraph
@@ -585,6 +619,12 @@ https://github.com/sailorproject/sailor
 https://github.com/keplerproject/orbit
 
 ## PHP C
+
+https://github.com/circonus-labs/fq
+
+https://github.com/fcten/bitmq
+
+https://github.com/liexusong/mx-queued
 
 https://github.com/iagapie/ext-nump
 
