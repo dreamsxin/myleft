@@ -425,6 +425,10 @@ https://github.com/gingerBill/Odin
 
 # IM && XMPP && SIP
 
+https://github.com/processone/ejabberd
+
+https://github.com/yaxim-org/yaxim
+
 https://github.com/Linphone-sync/linphone
 
 https://github.com/kamailio/kamailio
