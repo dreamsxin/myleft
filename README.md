@@ -425,6 +425,14 @@ https://github.com/gingerBill/Odin
 
 # IM && XMPP && SIP
 
+https://github.com/siacs/Conversations
+
+https://github.com/processone/ejabberd
+
+https://github.com/esl/MongooseIM
+
+https://github.com/inputmice/QuicksyServer
+
 https://github.com/processone/ejabberd
 
 https://github.com/yaxim-org/yaxim
