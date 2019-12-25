@@ -812,6 +812,10 @@ https://github.com/dreamsxin/php_riak
 
 ## CPP && C++
 
+https://github.com/HerikLyma/CPPWebFramework
+
+https://github.com/artyom-beilis/cppcms
+
 https://github.com/conradsnicta/armadillo-code
 
 https://github.com/cseed/knotkit
