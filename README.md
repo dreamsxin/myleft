@@ -282,6 +282,10 @@ https://github.com/hsleisink/hiawatha
 
 https://github.com/jorisvink/kore
 
+https://github.com/aquynh/capstone
+
+https://github.com/embedthis/esp
+
 ## C Websocket
 
 https://github.com/boazsegev/iodine
