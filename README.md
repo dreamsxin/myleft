@@ -1006,6 +1006,8 @@ https://github.com/onyx-platform/onyx
 
 # GO
 
+https://github.com/d5/tengo (A fast script language for Go)
+
 https://github.com/gogf/gf
 
 https://github.com/teambition/gear
@@ -1323,6 +1325,20 @@ https://github.com/crosswalk-project/crosswalk-ios
 # Office
 
 https://github.com/wmandai/FreelancerOffice
+
+# 少儿编程
+
+https://github.com/Paol-imi/the-aviator (blockly 积木编程)
+
+https://github.com/LLK/scratch-gui (Scratch-Blockly 积木编程)
+
+https://github.com/Mindstart/scratch-blocks
+
+https://github.com/AllAboutCode/EduBlocks
+
+https://github.com/bromagosa/Snap4Arduino
+
+https://github.com/smalruby/smalruby-editor
 
 # Game
 
