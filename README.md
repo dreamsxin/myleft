@@ -398,8 +398,9 @@ https://github.com/me115/linuxtools_rst
 
 # Language && programming language
 
-https://github.com/ring-lang/ring
+https://github.com/vlang/v
 
+https://github.com/ring-lang/ring
 
 https://github.com/nim-lang/Nim
 
@@ -1006,6 +1007,7 @@ https://github.com/onyx-platform/onyx
 
 # GO
 
+https://github.com/go-delve/delve (debugger)
 https://github.com/d5/tengo (A fast script language for Go)
 
 https://github.com/gogf/gf
