@@ -282,6 +282,10 @@ https://github.com/hsleisink/hiawatha
 
 https://github.com/jorisvink/kore
 
+https://github.com/aquynh/capstone
+
+https://github.com/embedthis/esp
+
 ## C Websocket
 
 https://github.com/boazsegev/iodine
@@ -394,8 +398,9 @@ https://github.com/me115/linuxtools_rst
 
 # Language && programming language
 
-https://github.com/ring-lang/ring
+https://github.com/vlang/v
 
+https://github.com/ring-lang/ring
 
 https://github.com/nim-lang/Nim
 
@@ -808,6 +813,10 @@ https://github.com/dreamsxin/php_riak
 
 ## CPP && C++
 
+https://github.com/HerikLyma/CPPWebFramework
+
+https://github.com/artyom-beilis/cppcms
+
 https://github.com/conradsnicta/armadillo-code
 
 https://github.com/cseed/knotkit
@@ -997,6 +1006,13 @@ https://github.com/thrill/thrill
 https://github.com/onyx-platform/onyx
 
 # GO
+
+https://github.com/go-delve/delve (debugger)
+https://github.com/d5/tengo (A fast script language for Go)
+
+https://github.com/gogf/gf
+
+https://github.com/teambition/gear
 
 https://github.com/kubernetes/kubernetes
 
@@ -1311,6 +1327,20 @@ https://github.com/crosswalk-project/crosswalk-ios
 # Office
 
 https://github.com/wmandai/FreelancerOffice
+
+# 少儿编程
+
+https://github.com/Paol-imi/the-aviator (blockly 积木编程)
+
+https://github.com/LLK/scratch-gui (Scratch-Blockly 积木编程)
+
+https://github.com/Mindstart/scratch-blocks
+
+https://github.com/AllAboutCode/EduBlocks
+
+https://github.com/bromagosa/Snap4Arduino
+
+https://github.com/smalruby/smalruby-editor
 
 # Game
 
