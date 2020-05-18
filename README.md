@@ -2587,6 +2587,8 @@ https://github.com/seven17000/LeetCode
 
 # Algorithm 算法
 
+https://github.com/doocs/leetcode
+
 https://github.com/azl397985856/leetcode
 
 https://github.com/dreamsxin/word2vec
