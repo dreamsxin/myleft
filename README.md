@@ -457,6 +457,8 @@ https://github.com/ptomato/gnome-inform7
 
 # Java
 
+https://github.com/TheAlgorithms/Java
+
 https://github.com/Netflix/eureka
 
 https://github.com/Netflix/ribbon
@@ -1796,6 +1798,9 @@ https://github.com/Fenoxo/sourceTiTS
 
 # HTML5
 
+
+https://github.com/pshihn/rough
+
 https://github.com/josdejong/jsoneditor
 
 https://github.com/lukasoppermann/html5sortable
@@ -2580,7 +2585,9 @@ https://github.com/zhantong/leetcode
 
 https://github.com/seven17000/LeetCode
 
-# Algorithm
+# Algorithm 算法
+
+https://github.com/azl397985856/leetcode
 
 https://github.com/dreamsxin/word2vec
 
