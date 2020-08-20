@@ -1330,7 +1330,7 @@ https://github.com/crosswalk-project/crosswalk-ios
 
 https://github.com/wmandai/FreelancerOffice
 
-# 少儿编程
+# 少儿编程 Scratch
 
 https://github.com/Paol-imi/the-aviator (blockly 积木编程)
 
@@ -2146,6 +2146,10 @@ https://github.com/mailru/FileAPI
 https://github.com/tapmodo/Jcrop
 
 # Javascript
+
+https://github.com/jmoenig/Snap
+
+https://github.com/google/blockly
 
 https://github.com/tastejs/todomvc
 
