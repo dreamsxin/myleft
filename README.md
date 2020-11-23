@@ -1702,6 +1702,8 @@ https://github.com/worldforge/cyphesis
 
 # Physics Engine
 
+https://piqnt.com/planck.js/
+
 https://github.com/slembcke/Chipmunk2D
 
 https://github.com/D-Programming-Deimos/ODE
@@ -1747,6 +1749,16 @@ https://github.com/fiezi/Moviesandbox
 https://github.com/gienekart/Simple-bug-saper
 
 # Flash ActionScript
+
+https://github.com/lightspark/lightspark (An open source flash player implementation )
+
+https://github.com/ruffle-rs/ruffle
+
+https://github.com/fdorg/flashdevelop
+
+https://github.com/apache/flex-sdk
+
+https://github.com/prominic/Moonshine-IDE
 
 https://github.com/away3d/away3d-examples-fp11
 
