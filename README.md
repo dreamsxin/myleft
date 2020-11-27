@@ -1750,6 +1750,8 @@ https://github.com/gienekart/Simple-bug-saper
 
 # Flash ActionScript
 
+https://github.com/zfoley/PhysicsCannonGameSource
+
 https://github.com/lightspark/lightspark (An open source flash player implementation )
 
 https://github.com/ruffle-rs/ruffle
@@ -1801,6 +1803,10 @@ https://github.com/theturtle32/OpenPalace
 https://github.com/mikechambers/as3corelib
 
 https://github.com/aduros-mirrors/as3isolib
+
+https://github.com/jesses/wck
+
+https://github.com/martywallace/sentinel
 
 # x86架构操作系统内核的实现
 
