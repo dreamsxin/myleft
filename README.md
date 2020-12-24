@@ -1712,6 +1712,22 @@ https://github.com/erincatto/Box2D
 
 https://github.com/MartyWallace/Sentinel
 
+# Javascript Game
+
+https://github.com/chvin/react-tetris
+
+https://github.com/jverneaut/react-threejs-tetris
+
+https://github.com/jolosimeon/ThreeJSTetris
+
+https://github.com/fridek/Threejs-Tetris
+
+https://github.com/tomo0613/offroadJS
+
+https://github.com/blaze33/droneWorld
+
+https://github.com/Lallassu/VoxLords
+
 # Javascript Game Engine
 
 https://github.com/vthibault/roBrowser
