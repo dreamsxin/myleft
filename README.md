@@ -1348,6 +1348,10 @@ https://github.com/smalruby/smalruby-editor
 
 # Game
 
+https://github.com/ErLinErYi/PlantsVsZombies
+
+https://github.com/ChinosInternationalCC/chinoPinball
+
 https://github.com/BZFlag-Dev/bzflag
 
 https://github.com/stuntrally/stuntrally
@@ -1714,7 +1718,19 @@ https://github.com/MartyWallace/Sentinel
 
 # Javascript Game
 
+https://github.com/Hextris/hextris
+
 https://github.com/chvin/react-tetris
+
+https://github.com/sandywalker/Tetris
+
+https://github.com/Aerolab/blockrain.js
+
+https://github.com/muan/emoji-minesweeper
+
+https://github.com/fishshiz/pinball-wizard
+
+https://github.com/seanperfecto/Astro-Pinball
 
 https://github.com/jverneaut/react-threejs-tetris
 
