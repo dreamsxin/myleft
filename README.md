@@ -1744,7 +1744,29 @@ https://github.com/blaze33/droneWorld
 
 https://github.com/Lallassu/VoxLords
 
+https://github.com/dmikis/gamejam
+
+https://github.com/victorqribeiro/isocity
+
+https://github.com/iondrimba/raining
+
+https://github.com/amwata/isometric-3d
+
 # Javascript Game Engine
+
+https://github.com/jdan/isomer
+
+https://github.com/nosir/obelisk.js
+
+https://github.com/photonstorm/phaser
+
+https://github.com/lewster32/phaser-plugin-isometric
+
+https://github.com/sebashwa/phaser3-plugin-isometric
+
+https://github.com/pixijs/pixi.js
+
+https://github.com/beakable/isometric
 
 https://github.com/vthibault/roBrowser
 
