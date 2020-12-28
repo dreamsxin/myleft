@@ -1166,6 +1166,8 @@ function parse_attachments($forum_id, &$message, &$attachments, &$update_count_a
 		$filename = $phpbb_root_path . $config['upload_path'] . '/' . utf8_basename($attachment['physical_filename']);
 
 		$upload_icon = '';
+		$download_link = '';
+		$display_cat = false;
 
 		if (isset($extensions[$attachment['extension']]))
 		{
@@ -1345,7 +1347,7 @@ function parse_attachments($forum_id, &$message, &$attachments, &$update_count_a
 		);
 		extract($phpbb_dispatcher->trigger_event('core.parse_attachments_modify_template_data', compact($vars)));
 		$update_count_ary = $update_count;
-		unset($update_count);
+		unset($update_count, $display_cat, $download_link);
 
 		$template->assign_block_vars('_file', $block_array);
 
@@ -1482,6 +1484,8 @@ function truncate_string($string, $max_length = 60, $max_store_length = 255, $al
 * Get username details for placing into templates.
 * This function caches all modes on first call, except for no_profile and anonymous user - determined by $user_id.
 *
+* @html Username spans and links
+*
 * @param string $mode Can be profile (for getting an url to the profile), username (for obtaining the username), colour (for obtaining the user colour), full (for obtaining a html string representing a coloured link to the users profile) or no_profile (the same as full but forcing no profile link)
 * @param int $user_id The users id
 * @param string $username The users name
@@ -1501,6 +1505,7 @@ function get_username_string($mode, $user_id, $username, $username_colour = '', 
 	{
 		global $phpbb_root_path, $phpEx;
 
+		/** @html Username spans and links for usage in the template */
 		$_profile_cache['base_url'] = append_sid("{$phpbb_root_path}memberlist.$phpEx", 'mode=viewprofile&amp;u={USER_ID}');
 		$_profile_cache['tpl_noprofile'] = '<span class="username">{USERNAME}</span>';
 		$_profile_cache['tpl_noprofile_colour'] = '<span style="color: {USERNAME_COLOUR};" class="username-coloured">{USERNAME}</span>';

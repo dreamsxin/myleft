@@ -33,18 +33,12 @@ class acp_bbcodes
 		// Set up general vars
 		$action	= $request->variable('action', '');
 		$bbcode_id = $request->variable('bbcode', 0);
-		$submit = $request->is_set_post('submit');
 
 		$this->tpl_name = 'acp_bbcodes';
 		$this->page_title = 'ACP_BBCODES';
 		$form_key = 'acp_bbcodes';
 
 		add_form_key($form_key);
-
-		if ($submit && !check_form_key($form_key))
-		{
-			trigger_error($user->lang['FORM_INVALID'] . adm_back_link($this->u_action), E_USER_WARNING);
-		}
 
 		// Set up mode-specific vars
 		switch ($action)
@@ -179,6 +173,12 @@ class acp_bbcodes
 				extract($phpbb_dispatcher->trigger_event('core.acp_bbcodes_modify_create', compact($vars)));
 
 				$warn_text = preg_match('%<[^>]*\{text[\d]*\}[^>]*>%i', $bbcode_tpl);
+
+				if (!$warn_text && !check_form_key($form_key))
+				{
+					trigger_error($user->lang['FORM_INVALID'] . adm_back_link($this->u_action), E_USER_WARNING);
+				}
+
 				if (!$warn_text || confirm_box(true))
 				{
 					$data = $this->build_regexp($bbcode_match, $bbcode_tpl);
@@ -211,11 +211,6 @@ class acp_bbcodes
 						$test = $data['bbcode_tag'];
 					}
 
-					if (!preg_match('%\\[' . $test . '[^]]*].*?\\[/' . $test . ']%s', $bbcode_match))
-					{
-						trigger_error($user->lang['BBCODE_OPEN_ENDED_TAG'] . adm_back_link($this->u_action), E_USER_WARNING);
-					}
-
 					if (strlen($data['bbcode_tag']) > 16)
 					{
 						trigger_error($user->lang['BBCODE_TAG_TOO_LONG'] . adm_back_link($this->u_action), E_USER_WARNING);
@@ -230,6 +225,12 @@ class acp_bbcodes
 					{
 						trigger_error($user->lang['BBCODE_HELPLINE_TOO_LONG'] . adm_back_link($this->u_action), E_USER_WARNING);
 					}
+
+					/**
+					 * Replace Emojis and other 4bit UTF-8 chars not allowed by MySQL to UCR/NCR.
+					 * Using their Numeric Character Reference's Hexadecimal notation.
+					 */
+					$bbcode_helpline = utf8_encode_ucr($bbcode_helpline);
 
 					$sql_ary = array_merge($sql_ary, array(
 						'bbcode_tag'				=> $data['bbcode_tag'],

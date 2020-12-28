@@ -173,14 +173,15 @@ class fulltext_mysql extends \phpbb\search\base
 			$engine = $info['Type'];
 		}
 
-		$fulltext_supported =
-			$engine === 'MyISAM' ||
-			// FULLTEXT is supported on InnoDB since MySQL 5.6.4 according to
-			// http://dev.mysql.com/doc/refman/5.6/en/innodb-storage-engine.html
-			// We also require https://bugs.mysql.com/bug.php?id=67004 to be
-			// fixed for proper overall operation. Hence we require 5.6.8.
-			$engine === 'InnoDB' &&
-			phpbb_version_compare($this->db->sql_server_info(true), '5.6.8', '>=');
+		$fulltext_supported = $engine === 'Aria' || $engine === 'MyISAM'
+			/**
+			 * FULLTEXT is supported on InnoDB since MySQL 5.6.4 according to
+			 * http://dev.mysql.com/doc/refman/5.6/en/innodb-storage-engine.html
+			 * We also require https://bugs.mysql.com/bug.php?id=67004 to be
+			 * fixed for proper overall operation. Hence we require 5.6.8.
+			 */
+			|| $engine === 'InnoDB'
+			&& phpbb_version_compare($this->db->sql_server_info(true), '5.6.8', '>=');
 
 		if (!$fulltext_supported)
 		{
@@ -188,7 +189,7 @@ class fulltext_mysql extends \phpbb\search\base
 		}
 
 		$sql = 'SHOW VARIABLES
-			LIKE \'ft\_%\'';
+			LIKE \'%ft\_%\'';
 		$result = $this->db->sql_query($sql);
 
 		$mysql_info = array();
@@ -198,8 +199,16 @@ class fulltext_mysql extends \phpbb\search\base
 		}
 		$this->db->sql_freeresult($result);
 
-		$this->config->set('fulltext_mysql_max_word_len', $mysql_info['ft_max_word_len']);
-		$this->config->set('fulltext_mysql_min_word_len', $mysql_info['ft_min_word_len']);
+		if ($engine === 'MyISAM')
+		{
+			$this->config->set('fulltext_mysql_max_word_len', $mysql_info['ft_max_word_len']);
+			$this->config->set('fulltext_mysql_min_word_len', $mysql_info['ft_min_word_len']);
+		}
+		else if ($engine === 'InnoDB')
+		{
+			$this->config->set('fulltext_mysql_max_word_len', $mysql_info['innodb_ft_max_token_size']);
+			$this->config->set('fulltext_mysql_min_word_len', $mysql_info['innodb_ft_min_token_size']);
+		}
 
 		return false;
 	}

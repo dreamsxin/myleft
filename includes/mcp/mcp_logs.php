@@ -28,9 +28,9 @@ class mcp_logs
 	var $u_action;
 	var $p_master;
 
-	function __construct(&$p_master)
+	function __construct($p_master)
 	{
-		$this->p_master = &$p_master;
+		$this->p_master = $p_master;
 	}
 
 	function main($id, $mode)
@@ -39,6 +39,7 @@ class mcp_logs
 		global $config, $phpbb_container, $phpbb_log;
 
 		$user->add_lang('acp/common');
+		$this->p_master->add_mod_info('acp');
 
 		$action = $request->variable('action', array('' => ''));
 

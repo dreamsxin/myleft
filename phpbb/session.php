@@ -1077,10 +1077,36 @@ class session
 	*/
 	function set_cookie($name, $cookiedata, $cookietime, $httponly = true)
 	{
-		global $config;
+		global $config, $phpbb_dispatcher;
 
 		// If headers are already set, we just return
 		if (headers_sent())
+		{
+			return;
+		}
+
+		$disable_cookie = false;
+		/**
+		* Event to modify or disable setting cookies
+		*
+		* @event core.set_cookie
+		* @var	bool		disable_cookie	Set to true to disable setting this cookie
+		* @var	string		name			Name of the cookie
+		* @var	string		cookiedata		The data to hold within the cookie
+		* @var	int			cookietime		The expiration time as UNIX timestamp
+		* @var	bool		httponly		Use HttpOnly?
+		* @since 3.2.9-RC1
+		*/
+		$vars = array(
+			'disable_cookie',
+			'name',
+			'cookiedata',
+			'cookietime',
+			'httponly',
+		);
+		extract($phpbb_dispatcher->trigger_event('core.set_cookie', compact($vars)));
+
+		if ($disable_cookie)
 		{
 			return;
 		}
@@ -1299,7 +1325,12 @@ class session
 			trigger_error($message);
 		}
 
-		return ($banned && $ban_row['ban_give_reason']) ? $ban_row['ban_give_reason'] : $banned;
+		if (!empty($ban_row))
+		{
+			$ban_row['ban_triggered_by'] = $ban_triggered_by;
+		}
+
+		return ($banned && $ban_row) ? $ban_row : $banned;
 	}
 
 	/**

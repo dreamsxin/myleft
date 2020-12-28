@@ -44,14 +44,14 @@ class acp_permissions
 			include($phpbb_root_path . 'includes/acp/auth.' . $phpEx);
 		}
 
-		$this->permissions = $phpbb_container->get('acl.permissions');
-
 		$auth_admin = new auth_admin();
 
 		$user->add_lang('acp/permissions');
 		add_permission_language();
 
 		$this->tpl_name = 'acp_permissions';
+
+		$this->permissions = $phpbb_container->get('acl.permissions');
 
 		// Trace has other vars
 		if ($mode == 'trace')
@@ -676,7 +676,7 @@ class acp_permissions
 	/**
 	* Apply permissions
 	*/
-	function set_permissions($mode, $permission_type, &$auth_admin, &$user_id, &$group_id)
+	function set_permissions($mode, $permission_type, $auth_admin, &$user_id, &$group_id)
 	{
 		global $db, $cache, $user, $auth;
 		global $request;
@@ -765,7 +765,7 @@ class acp_permissions
 	/**
 	* Apply all permissions
 	*/
-	function set_all_permissions($mode, $permission_type, &$auth_admin, &$user_id, &$group_id)
+	function set_all_permissions($mode, $permission_type, $auth_admin, &$user_id, &$group_id)
 	{
 		global $db, $cache, $user, $auth;
 		global $request;
@@ -881,7 +881,7 @@ class acp_permissions
 	/**
 	* Remove permissions
 	*/
-	function remove_permissions($mode, $permission_type, &$auth_admin, &$user_id, &$group_id, &$forum_id)
+	function remove_permissions($mode, $permission_type, $auth_admin, &$user_id, &$group_id, &$forum_id)
 	{
 		global $user, $db, $cache, $auth;
 
