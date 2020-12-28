@@ -1,6 +1,9 @@
 # 安装
 
 ```shell
+# -s --schema-only 只输出表纲要（定义），不输出数据．
+pg_dump -s -h localhost -U postgres -W myleftstudio > store/backup3.sql
+pg_dump -h localhost -U postgres myleftstudio > store/backup3.sql
 sudo -u postgres psql -d myleftstudio -f store/backup.sql
 ```
 
