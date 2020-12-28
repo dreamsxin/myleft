@@ -818,6 +818,8 @@ https://github.com/dreamsxin/php_riak
 
 ## CPP && C++
 
+https://github.com/openframeworks/openFrameworks
+
 https://github.com/HerikLyma/CPPWebFramework
 
 https://github.com/artyom-beilis/cppcms
@@ -1333,7 +1335,7 @@ https://github.com/crosswalk-project/crosswalk-ios
 
 https://github.com/wmandai/FreelancerOffice
 
-# 少儿编程
+# 少儿编程 Scratch
 
 https://github.com/Paol-imi/the-aviator (blockly 积木编程)
 
@@ -1348,6 +1350,10 @@ https://github.com/bromagosa/Snap4Arduino
 https://github.com/smalruby/smalruby-editor
 
 # Game
+
+https://github.com/ErLinErYi/PlantsVsZombies
+
+https://github.com/ChinosInternationalCC/chinoPinball
 
 https://github.com/BZFlag-Dev/bzflag
 
@@ -1703,6 +1709,8 @@ https://github.com/worldforge/cyphesis
 
 # Physics Engine
 
+https://piqnt.com/planck.js/
+
 https://github.com/slembcke/Chipmunk2D
 
 https://github.com/D-Programming-Deimos/ODE
@@ -1711,7 +1719,57 @@ https://github.com/erincatto/Box2D
 
 https://github.com/MartyWallace/Sentinel
 
+# Javascript Game
+
+https://github.com/Hextris/hextris
+
+https://github.com/chvin/react-tetris
+
+https://github.com/sandywalker/Tetris
+
+https://github.com/Aerolab/blockrain.js
+
+https://github.com/muan/emoji-minesweeper
+
+https://github.com/fishshiz/pinball-wizard
+
+https://github.com/seanperfecto/Astro-Pinball
+
+https://github.com/jverneaut/react-threejs-tetris
+
+https://github.com/jolosimeon/ThreeJSTetris
+
+https://github.com/fridek/Threejs-Tetris
+
+https://github.com/tomo0613/offroadJS
+
+https://github.com/blaze33/droneWorld
+
+https://github.com/Lallassu/VoxLords
+
+https://github.com/dmikis/gamejam
+
+https://github.com/victorqribeiro/isocity
+
+https://github.com/iondrimba/raining
+
+https://github.com/amwata/isometric-3d
+
 # Javascript Game Engine
+
+https://github.com/jdan/isomer
+
+https://github.com/nosir/obelisk.js
+
+https://github.com/photonstorm/phaser
+
+https://github.com/lewster32/phaser-plugin-isometric
+
+https://github.com/sebashwa/phaser3-plugin-isometric
+
+https://github.com/pixijs/pixi.js
+
+https://github.com/beakable/isometric
 
 https://github.com/vthibault/roBrowser
 
@@ -1748,6 +1806,18 @@ https://github.com/fiezi/Moviesandbox
 https://github.com/gienekart/Simple-bug-saper
 
 # Flash ActionScript
+
+https://github.com/zfoley/PhysicsCannonGameSource
+
+https://github.com/lightspark/lightspark (An open source flash player implementation )
+
+https://github.com/ruffle-rs/ruffle
+
+https://github.com/fdorg/flashdevelop
+
+https://github.com/apache/flex-sdk
+
+https://github.com/prominic/Moonshine-IDE
 
 https://github.com/away3d/away3d-examples-fp11
 
@@ -1790,6 +1860,10 @@ https://github.com/theturtle32/OpenPalace
 https://github.com/mikechambers/as3corelib
 
 https://github.com/aduros-mirrors/as3isolib
+
+https://github.com/jesses/wck
+
+https://github.com/martywallace/sentinel
 
 # x86架构操作系统内核的实现
 
@@ -2149,6 +2223,12 @@ https://github.com/mailru/FileAPI
 https://github.com/tapmodo/Jcrop
 
 # Javascript
+
+https://github.com/electron/electron - Electron 是一个能让你使用 JavaScript, HTML 和 CSS 来创建桌面应用程序的框架。 
+
+https://github.com/jmoenig/Snap
+
+https://github.com/google/blockly
 
 https://github.com/tastejs/todomvc
 
