@@ -477,34 +477,6 @@ function posting_gen_topic_types($forum_id, $cur_topic_type = POST_NORMAL)
 //
 // Attachment related functions
 //
-
-/**
-* Upload Attachment - filedata is generated here
-* Uses upload class
-*
-* @deprecated 3.2.0-a1 (To be removed: 3.4.0)
-*
-* @param string			$form_name		The form name of the file upload input
-* @param int			$forum_id		The id of the forum
-* @param bool			$local			Whether the file is local or not
-* @param string			$local_storage	The path to the local file
-* @param bool			$is_message		Whether it is a PM or not
-* @param array			$local_filedata	A filespec object created for the local file
-*
-* @return array File data array
-*/
-function upload_attachment($form_name, $forum_id, $local = false, $local_storage = '', $is_message = false, $local_filedata = false)
-{
-	global $phpbb_container;
-
-	/** @var \phpbb\attachment\manager $attachment_manager */
-	$attachment_manager = $phpbb_container->get('attachment.manager');
-	$file = $attachment_manager->upload($form_name, $forum_id, $local, $local_storage, $is_message, $local_filedata);
-	unset($attachment_manager);
-
-	return $file;
-}
-
 /**
 * Calculate the needed size for Thumbnail
 */
@@ -721,12 +693,6 @@ function create_thumbnail($source, $destination, $mimetype)
 				imagecopyresampled($new_image, $image, 0, 0, 0, 0, $new_width, $new_height, $width, $height);
 			}
 
-			// If we are in safe mode create the destination file prior to using the gd functions to circumvent a PHP bug
-			if (@ini_get('safe_mode') || @strtolower(ini_get('safe_mode')) == 'on')
-			{
-				@touch($destination);
-			}
-
 			switch ($type['format'])
 			{
 				case IMG_GIF:
@@ -804,10 +770,11 @@ function posting_gen_attachment_entry($attachment_data, &$filename_data, $show_a
 
 	// Some default template variables
 	$template->assign_vars(array(
-		'S_SHOW_ATTACH_BOX'	=> $show_attach_box,
-		'S_HAS_ATTACHMENTS'	=> count($attachment_data),
-		'FILESIZE'			=> $config['max_filesize'],
-		'FILE_COMMENT'		=> (isset($filename_data['filecomment'])) ? $filename_data['filecomment'] : '',
+		'S_SHOW_ATTACH_BOX'				=> $show_attach_box,
+		'S_HAS_ATTACHMENTS'				=> count($attachment_data),
+		'FILESIZE'						=> $config['max_filesize'],
+		'FILE_COMMENT'					=> (isset($filename_data['filecomment'])) ? $filename_data['filecomment'] : '',
+		'MAX_ATTACHMENT_FILESIZE'		=> $config['max_filesize'] > 0 ? $user->lang('MAX_ATTACHMENT_FILESIZE', get_formatted_filesize($config['max_filesize'])) : '',
 	));
 
 	if (count($attachment_data))
@@ -2433,6 +2400,7 @@ function submit_post($mode, $subject, $username, $topic_type, &$poll_ary, &$data
 					'notification.type.quote',
 					'notification.type.bookmark',
 					'notification.type.post',
+					'notification.type.forum',
 				), $notification_data);
 			break;
 
@@ -2451,6 +2419,7 @@ function submit_post($mode, $subject, $username, $topic_type, &$poll_ary, &$data
 					'notification.type.bookmark',
 					'notification.type.topic',
 					'notification.type.post',
+					'notification.type.forum',
 				), $notification_data);
 			break;
 		}
