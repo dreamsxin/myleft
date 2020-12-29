@@ -1721,6 +1721,12 @@ https://github.com/MartyWallace/Sentinel
 
 # Javascript Game
 
+https://github.com/borgar/jquery-sokoban
+
+https://github.com/Auroriax/js13k-2020
+
+https://github.com/mgerhardy/caveexpress
+
 https://github.com/Hextris/hextris
 
 https://github.com/chvin/react-tetris
