@@ -1359,6 +1359,8 @@ https://github.com/smalruby/smalruby-editor
 
 # Game
 
+https://github.com/tuxemon/tuxemon - python
+
 https://github.com/ErLinErYi/PlantsVsZombies
 
 https://github.com/ChinosInternationalCC/chinoPinball
@@ -1793,6 +1795,12 @@ https://github.com/lewster32/phaser-plugin-isometric
 
 https://github.com/sebashwa/phaser3-plugin-isometric
 
+https://github.com/lafferjm/phaser3-tilemaps
+
+https://github.com/mikewesthad/phaser-3-tilemap-blog-posts
+
+https://github.com/liabru/matter-js - 2D rigid body physics engine
+
 https://github.com/pixijs/pixi.js
 
 https://github.com/beakable/isometric
@@ -1800,8 +1808,6 @@ https://github.com/beakable/isometric
 https://github.com/vthibault/roBrowser
 
 https://github.com/photonstorm/lazer
-
-https://github.com/photonstorm/phaser
 
 https://github.com/qiciengine/qiciengine-core
 
