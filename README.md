@@ -818,6 +818,8 @@ https://github.com/dreamsxin/php_riak
 
 ## CPP && C++
 
+https://github.com/cvet/fonline
+
 https://github.com/openframeworks/openFrameworks
 
 https://github.com/HerikLyma/CPPWebFramework
@@ -1104,6 +1106,12 @@ https://github.com/xunen/stream-rtmp-nginx-module
 https://github.com/openresty/lua-nginx-module
 
 https://github.com/webcpp/hi-nginx
+
+# Java
+
+https://github.com/netty/netty
+
+https://github.com/BSVogler/WurfelEngineSDK
 
 # Android
 
@@ -1573,6 +1581,8 @@ https://github.com/pmer/TsunagariC
 
 # Game Map Edit
 
+https://github.com/mapeditor/tiled
+
 https://github.com/borf/Browedit
 
 ## Game Engine
@@ -1763,7 +1773,15 @@ https://github.com/amwata/isometric-3d
 
 # Javascript Game Engine
 
+https://github.com/erikwatson/Bramble
+
+https://github.com/erikwatson/Level-Editor
+
+https://github.com/cstoquer/pixelbox
+
 https://github.com/jdan/isomer
+
+https://github.com/nikki/TinyMapEditor
 
 https://github.com/nosir/obelisk.js
 
