@@ -1791,6 +1791,8 @@ https://github.com/nosir/obelisk.js
 
 https://github.com/photonstorm/phaser
 
+https://github.com/photonstorm/Flixel-Power-Tools
+
 https://github.com/lewster32/phaser-plugin-isometric
 
 https://github.com/sebashwa/phaser3-plugin-isometric
