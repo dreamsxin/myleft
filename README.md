@@ -2025,6 +2025,18 @@ https://github.com/funkaster/ChesterGL
 
 https://github.com/dabeng/OrgChart
 
+## Animation
+
+https://github.com/algorithm-visualizer/algorithm-visualizer
+
+https://github.com/svgdotjs/svg.js
+
+https://github.com/mojs/mojs
+
+https://github.com/juliangarnier/anime
+
+https://github.com/alexfoxy/lax.js
+
 ## SVG Chart
 
 https://github.com/d3/d3
