@@ -646,6 +646,8 @@ https://github.com/keplerproject/orbit
 
 ## PHP C
 
+https://github.com/phpsci/phpsci-carray
+
 https://github.com/circonus-labs/fq
 
 https://github.com/fcten/bitmq
