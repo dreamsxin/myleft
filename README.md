@@ -820,6 +820,10 @@ https://github.com/dreamsxin/php_riak
 
 ## CPP && C++
 
+https://github.com/mgieseki/dvisvgm
+
+https://github.com/rive-app/rive-cpp
+
 https://github.com/cvet/fonline
 
 https://github.com/openframeworks/openFrameworks
