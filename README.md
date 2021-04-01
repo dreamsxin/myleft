@@ -1055,6 +1055,8 @@ https://github.com/golang/go
 
 # NodeJS
 
+https://github.com/HabitRPG/habitica
+
 https://github.com/nodejs/node
 
 https://github.com/expressjs/express
@@ -2275,6 +2277,8 @@ https://github.com/mailru/FileAPI
 https://github.com/tapmodo/Jcrop
 
 # Javascript
+
+https://github.com/SheetJS/sheetjs
 
 https://github.com/electron/electron - Electron 是一个能让你使用 JavaScript, HTML 和 CSS 来创建桌面应用程序的框架。 
 
