@@ -1022,7 +1022,28 @@ https://github.com/onyx-platform/onyx
 
 # GO
 
+https://github.com/go-kit/kit
+
+https://github.com/gin-gonic/gin
+
+https://github.com/jmoiron/sqlx
+
+https://github.com/nats-io/nats-server
+
+https://github.com/amacneil/dbmate
+
+https://github.com/go-chi/chi
+
+https://github.com/PuerkitoBio/goquery
+
+https://github.com/spf13/cobra (CLI)
+
+https://github.com/upper/db
+
+https://github.com/samonzeweb/godb
+
 https://github.com/go-delve/delve (debugger)
+
 https://github.com/d5/tengo (A fast script language for Go)
 
 https://github.com/gogf/gf
