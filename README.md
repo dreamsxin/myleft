@@ -1610,6 +1610,10 @@ https://github.com/RodTGG/Zeldaish
 
 https://github.com/pmer/TsunagariC
 
+https://github.com/zhikunmen/paopao
+
+https://github.com/lifebycode/wheel
+
 # Game Map Edit
 
 https://github.com/mapeditor/tiled
@@ -1617,6 +1621,8 @@ https://github.com/mapeditor/tiled
 https://github.com/borf/Browedit
 
 ## Game Engine
+
+https://github.com/DaVikingCode/Citrus-Engine
 
 https://github.com/megamarc/Tilengine
 
