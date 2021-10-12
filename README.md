@@ -510,6 +510,8 @@ https://github.com/umbrellary/openwrt-cc
 
 ## PostgreSQL
 
+https://github.com/postgrespro/vops 向量计算插件
+
 https://github.com/knizhnik/imcs 列式存储
 
 https://github.com/citusdata/cstore_fdw
