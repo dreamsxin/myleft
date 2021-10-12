@@ -510,6 +510,10 @@ https://github.com/umbrellary/openwrt-cc
 
 ## PostgreSQL
 
+https://github.com/knizhnik/imcs 列式存储
+
+https://github.com/citusdata/cstore_fdw
+
 https://github.com/dbcli/pgcli
 
 https://github.com/dreamsxin/pqc
