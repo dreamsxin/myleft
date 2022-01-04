@@ -333,6 +333,8 @@ https://github.com/zeDoctor/PuzzleDash
 
 # Blender
 
+https://github.com/blender/blender
+
 https://github.com/armory3d/armory
 
 https://github.com/UPBGE/blender
@@ -344,6 +346,8 @@ https://cloud.blender.org/p/dailydweebs/
 https://cloud.blender.org/p/monkaa/
 
 https://cloud.blender.org/p/spring
+
+https://github.com/makehumancommunity/makehuman
 
 # Ruby
 
