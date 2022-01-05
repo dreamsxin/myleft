@@ -1092,6 +1092,8 @@ https://github.com/pion/quic
 
 https://github.com/pion/sctp
 
+https://github.com/skywind3000/kcp
+
 https://github.com/xtaci/kcptun
 
 https://github.com/xtaci/kcp-go
