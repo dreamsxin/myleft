@@ -1084,6 +1084,28 @@ https://github.com/kataras/iris
 
 https://github.com/golang/go
 
+## go network
+
+https://github.com/lucas-clemente/quic-go
+
+https://github.com/pion/quic
+
+https://github.com/pion/sctp
+
+https://github.com/xtaci/kcptun
+
+https://github.com/xtaci/kcp-go
+
+https://github.com/yzslab/kcpvpn
+
+https://github.com/snail007/goproxy
+
+https://github.com/devsisters/goquic
+
+https://github.com/devsisters/libquic
+
+https://github.com/esnet/iperf
+
 # NodeJS
 
 https://github.com/HabitRPG/habitica
