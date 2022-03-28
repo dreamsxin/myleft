@@ -1424,6 +1424,8 @@ https://github.com/smalruby/smalruby-editor
 
 # Game
 
+https://github.com/lo-th/3d.city
+
 https://github.com/Olde-Skuul/doom3do
 
 https://github.com/TTimo/doom3.gpl
@@ -1663,6 +1665,8 @@ https://github.com/mapeditor/tiled
 https://github.com/borf/Browedit
 
 ## Game Engine
+
+https://github.com/lo-th/Oimo.js
 
 https://github.com/scottcgi/Mojoc
 
