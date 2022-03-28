@@ -1424,6 +1424,12 @@ https://github.com/smalruby/smalruby-editor
 
 # Game
 
+https://github.com/Olde-Skuul/doom3do
+
+https://github.com/TTimo/doom3.gpl
+
+https://github.com/id-Software/DOOM-iOS
+
 https://github.com/tuxemon/tuxemon - python
 
 https://github.com/ErLinErYi/PlantsVsZombies
@@ -1657,6 +1663,8 @@ https://github.com/mapeditor/tiled
 https://github.com/borf/Browedit
 
 ## Game Engine
+
+https://github.com/scottcgi/Mojoc
 
 https://github.com/DaVikingCode/Citrus-Engine
 
