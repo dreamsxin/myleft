@@ -2702,6 +2702,10 @@ https://github.com/openstreetmap/cgimap
 
 # Python
 
+https://github.com/ClaudiuGeorgiu/PlaystoreDownloader
+
+https://github.com/matlink/gplaycli
+
 https://github.com/kitao/pyxel
 
 https://github.com/flareteam/flare-game
