@@ -1030,7 +1030,11 @@ https://github.com/thrill/thrill
 
 https://github.com/onyx-platform/onyx
 
-# GO
+# GO && GoLang
+
+https://github.com/RichardKnop/machinery
+
+https://github.com/vmihailenco/taskq
 
 https://github.com/go-kit/kit
 
