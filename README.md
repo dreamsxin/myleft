@@ -1996,6 +1996,9 @@ https://github.com/Fenoxo/sourceTiTS
 
 # HTML5
 
+https://github.com/hiloteam/Sein.js
+
+https://github.com/playcanvas/engine
 
 https://github.com/pshihn/rough
 
@@ -2023,7 +2026,7 @@ https://github.com/quark-dev/Phonon-Framework
 
 https://github.com/icecreamliker/uskin
 
-https://github.com/BabylonJS/Babylon.js
+https://github.com/BabylonJS/Babylon.js (例子 https://github.com/Smashelbow/xinyan)
 
 https://github.com/mrdoob/three.js
 
