@@ -1996,6 +1996,10 @@ https://github.com/Fenoxo/sourceTiTS
 
 # HTML5
 
+https://github.com/axaq/traviso.js (https://www.travisojs.com/examples/example1/)
+
+https://github.com/MakinoharaShoko/WebGAL
+
 https://github.com/hiloteam/Sein.js
 
 https://github.com/playcanvas/engine
