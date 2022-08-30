@@ -492,6 +492,14 @@ https://github.com/baidu/uid-generator
 
 https://github.com/zhuzhong/idleaf
 
+## javascript Graphics
+
+https://github.com/rough-stuff/rough
+
+https://github.com/vector-js/vector
+
+http://www.graphicsjs.org/
+
 ## Javascript engine
 
 https://github.com/jerryscript-project/jerryscript
