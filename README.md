@@ -9,6 +9,8 @@ sudo -u postgres psql -d myleftstudio -f store/backup.sql
 
 # C
 
+https://github.com/EQ-Alpha/KeyDB
+
 https://github.com/threefoldtech/0-db
 
 https://github.com/thesecretmaster/predis
