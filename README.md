@@ -467,6 +467,8 @@ https://github.com/jech/galene
 
 https://github.com/saltyrtc/
 
+https://github.com/meetecho/janus-gateway
+
 ## libuv
 
 https://github.com/libuv/libuv
