@@ -2865,9 +2865,15 @@ https://github.com/jcupitt/libvips
 
 https://github.com/kohler/gifsicle
 
-# IDE
+# IDE 开发工具
 
 https://github.com/geany/geany
+
+https://codelite.org/
+
+https://netbeans.apache.org/
+
+https://www.codeblocks.org/
 
 # Deep Learning && 机器学习 && 深度学习 && 图片识别
 
