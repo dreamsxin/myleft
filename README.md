@@ -439,9 +439,27 @@ https://github.com/gingerBill/Odin
 
 # IM && XMPP && SIP && WEBRTC
 
+https://github.com/jitsi/jitsi
+
 https://github.com/processone/ejabberd
 
 https://github.com/kamailio/kamailio
+
+https://github.com/lynckia/licode
+
+https://github.com/Red5/red5-server
+
+https://github.com/ant-media/Ant-Media-Server
+
+https://github.com/signalwire/freeswitch
+
+https://github.com/asterisk/asterisk
+
+https://github.com/igniterealtime/Openfire
+
+https://github.com/meetecho/janus-gateway
+
+https://github.com/versatica/mediasoup
 
 https://github.com/ionorg/ion
 
