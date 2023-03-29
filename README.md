@@ -848,6 +848,12 @@ https://github.com/CismonX/ext-collections
 
 # PHP
 
+https://github.com/osCommerce/oscommerce2
+
+https://github.com/PrestaShop/PrestaShop (https://demo.prestashop.com/#/en/front)
+
+https://github.com/likeshop-github/likeshop
+
 https://github.com/kosinix/grafika
 
 https://github.com/kohana/kohana
