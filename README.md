@@ -1084,6 +1084,8 @@ https://github.com/onyx-platform/onyx
 
 # GO && GoLang
 
+https://github.com/variadico/noti
+
 https://github.com/justjanne/powerline-go
 
 https://github.com/shirou/gopsutil
@@ -1168,7 +1170,21 @@ https://github.com/devsisters/libquic
 
 https://github.com/esnet/iperf
 
-https://github.com/ZezhongWang/iperf-go 
+https://github.com/ZezhongWang/iperf-go
+
+https://github.com/phsym/console-slog
+
+golang.org/x/crypto/ssh/terminal
+
+https://github.com/wzshiming/ctc
+
+https://github.com/mewbak/dgraph
+
+https://github.com/gizak/termui
+
+https://github.com/yudai/gotty
+
+https://github.com/maaslalani/slides
 
 # NodeJS
 
