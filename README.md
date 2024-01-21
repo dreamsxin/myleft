@@ -1084,6 +1084,10 @@ https://github.com/onyx-platform/onyx
 
 # GO && GoLang
 
+https://github.com/justjanne/powerline-go
+
+https://github.com/shirou/gopsutil
+
 https://github.com/RichardKnop/machinery
 
 https://github.com/vmihailenco/taskq
