@@ -1084,9 +1084,27 @@ https://github.com/onyx-platform/onyx
 
 # GO && GoLang
 
+https://github.com/polarsignals/frostdb
+
+https://github.com/emer/etable
+
+https://github.com/iand/datatable
+
+https://github.com/kelindar/column
+
+https://github.com/logv/sybil/tree/master
+
 https://github.com/smithoss/gonymizer 数据匿名导出
 
 https://github.com/caerbannogwhite/gandalff
+
+https://github.com/k-sone/critbitgo
+
+https://github.com/1Panel-dev/1Panel 开源的 Linux 服务器运维管理面板
+
+https://github.com/influxdata/kapacitor
+
+https://github.com/joho/godotenv
 
 https://github.com/variadico/noti
 
@@ -2704,6 +2722,8 @@ https://github.com/dulingkang/Capture
 https://github.com/PrashantMangukiya/SwiftCoreImageFilter
 
 # Rust
+
+https://github.com/influxdata/influxdb
 
 https://github.com/rust-lang/rust
 
