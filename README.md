@@ -1084,6 +1084,8 @@ https://github.com/onyx-platform/onyx
 
 # GO && GoLang
 
+https://github.com/duckdb/duckdb
+
 https://github.com/polarsignals/frostdb
 
 https://github.com/emer/etable
