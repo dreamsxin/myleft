@@ -1126,7 +1126,7 @@ https://github.com/jmoiron/sqlx
 
 https://github.com/nats-io/nats-server
 
-https://github.com/amacneil/dbmate
+https://github.com/amacneil/dbmate database migration tool
 
 https://github.com/go-chi/chi
 
@@ -1135,6 +1135,8 @@ https://github.com/PuerkitoBio/goquery
 https://github.com/spf13/cobra (CLI)
 
 https://github.com/upper/db
+
+https://github.com/FerretDB/FerretDB A truly Open Source MongoDB alternative
 
 https://github.com/samonzeweb/godb
 
@@ -1152,7 +1154,7 @@ https://github.com/pilosa/pilosa
 
 https://github.com/boltdb/bolt
 
-https://github.com/dgraph-io/badger
+https://github.com/dgraph-io/badger Fast key-value DB in Go.
 
 https://github.com/sosedoff/pgweb
 
