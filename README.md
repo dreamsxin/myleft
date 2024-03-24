@@ -1084,6 +1084,10 @@ https://github.com/onyx-platform/onyx
 
 # GO && GoLang
 
+https://github.com/vinceanalytics/vince
+
+https://github.com/xo/usql
+
 https://github.com/milvus-io/milvus
 
 https://github.com/duckdb/duckdb
@@ -2820,6 +2824,8 @@ https://github.com/openstreetmap/chef
 https://github.com/openstreetmap/cgimap
 
 # Python
+
+https://github.com/v6d-io/v6d
 
 https://github.com/ClaudiuGeorgiu/PlaystoreDownloader
 
