@@ -1084,6 +1084,12 @@ https://github.com/onyx-platform/onyx
 
 # GO && GoLang
 
+https://github.com/IceFireDB/IceFireDB
+
+https://github.com/lotusdblabs/lotusdb
+
+https://github.com/uber/aresdb AresDB is a GPU-powered real-time analytics storage and query engine.
+
 https://github.com/influxdata/flux
 
 https://github.com/vinceanalytics/vince
